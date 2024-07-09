@@ -1,0 +1,102 @@
+[
+  {
+    "nama": "HTML",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "CSS",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "Sass",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "JavaScript",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "TypeScript",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "PHP",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "CodeIgniter",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Laravel",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "React",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "Express",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Hapi",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Webpack",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Vite",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Bootstrap",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "Tailwind",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "MySQL",
+    "level": "Advanced",
+    "image": ""
+  },
+  {
+    "nama": "PostgreSQL",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "MongoDB",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Kotlin",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
+    "nama": "Jetpack Compose    ",
+    "level": "Intermediate",
+    "image": ""
+  }
+]
