@@ -60,6 +60,11 @@
     "image": ""
   },
   {
+    "nama": "PWA",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
     "nama": "Vite",
     "level": "Intermediate",
     "image": ""
@@ -85,6 +90,11 @@
     "image": ""
   },
   {
+    "nama": "MsSQL",
+    "level": "Intermediate",
+    "image": ""
+  },
+  {
     "nama": "MongoDB",
     "level": "Intermediate",
     "image": ""
@@ -95,7 +105,7 @@
     "image": ""
   },
   {
-    "nama": "Jetpack Compose    ",
+    "nama": "Jetpack Compose",
     "level": "Intermediate",
     "image": ""
   }

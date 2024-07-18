@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "SIP Vision",
+    "category": "real"
+  },
+  {
+    "id": 2,
+    "name": "E-Checklist",
+    "category": "real"
+  },
+  {
+    "id": 3,
+    "name": "KKMI Manuflex Dashboard",
+    "category": "real"
+  },
+  {
+    "id": 4,
+    "name": "Admin Puri Hotel",
+    "category": "real"
+  },
+  {
+    "id": 5,
+    "name": "PM Scheduler",
+    "category": "real"
+  },
+  {
+    "id": 6,
+    "name": "E-Sparepart",
+    "category": "real"
+  },
+  {
+    "id": 7,
+    "name": "Maintenance Learning Center",
+    "category": "real"
+  },
+  {
+    "id": 8,
+    "name": "Master Checksheet",
+    "category": "real"
+  },
+  {
+    "id": 9,
+    "name": "Production Control",
+    "category": "real"
+  },
+  {
+    "id": 6,
+    "name": "E-Sparepart",
+    "category": "dummy"
+  },
+  {
+    "id": 7,
+    "name": "Maintenance Learning Center",
+    "category": "dummy"
+  },
+  {
+    "id": 8,
+    "name": "Master Checksheet",
+    "category": "dummy"
+  },
+  {
+    "id": 9,
+    "name": "Production Control",
+    "category": "dummy"
+  }
+]
