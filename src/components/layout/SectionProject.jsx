@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
-import { Card, Col, Row, Nav } from "react-bootstrap";
+import { Card, Col, Row, Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
 import data from "../../utils/project.json";
-const SectionProject = () => {
-  const [category, setCategory] = useState("");
+
+const SectionProject = (props) => {
+  const { setModalShow } = props;
+  const [category, setCategory] = useState("real");
   const typeClick = (props) => () => {
     setCategory(props);
   };
-
+  const openModal = () => {
+    setModalShow(true);
+  };
   const filteredData = category
     ? data.filter((item) => item.category == category)
     : data;
-
   return (
     <div className="bg-dark p-5" id="project">
       <h2
@@ -32,14 +35,21 @@ const SectionProject = () => {
           </Nav.Link>
         </Nav.Item>
       </Nav>
-      <Row xs={1} md={3} className="g-4">
+      <Row xs={1} sm={2} md={3} className="g-4">
         {filteredData.map((item, index) => (
           <Col key={index}>
-            <Card className="h-100 text-center text-white">
-              <Card.Body>
-                <Card.Title>{item.name}</Card.Title>
-              </Card.Body>
-            </Card>
+            <OverlayTrigger
+              placement="bottom"
+              overlay={<Tooltip>{item.name}</Tooltip>}
+            >
+              <Card
+                className="h-100 text-center text-white border-dark shadow-sm"
+                onClick={openModal}
+              >
+                <Card.Img src={item.image} alt="Card image" />
+                <Card.ImgOverlay></Card.ImgOverlay>
+              </Card>
+            </OverlayTrigger>
           </Col>
         ))}
       </Row>

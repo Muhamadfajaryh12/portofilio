@@ -2,47 +2,56 @@
   {
     "id": 1,
     "name": "SIP Vision",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/sip_web.png"
   },
   {
     "id": 2,
     "name": "E-Checklist",
-    "category": "real"
+    "category": "real",
+    "image": ""
   },
   {
     "id": 3,
     "name": "KKMI Manuflex Dashboard",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/kkmi_web.png"
   },
   {
     "id": 4,
     "name": "Admin Puri Hotel",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/hotel_web.png"
   },
   {
     "id": 5,
     "name": "PM Scheduler",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/pmscheduler_web.png"
   },
   {
     "id": 6,
     "name": "E-Sparepart",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/esparepart_web.png"
   },
   {
     "id": 7,
     "name": "Maintenance Learning Center",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/learning_web.png"
   },
   {
     "id": 8,
     "name": "Master Checksheet",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/checksheet_web.png"
   },
   {
     "id": 9,
     "name": "Production Control",
-    "category": "real"
+    "category": "real",
+    "image": "src/assets/production_web.png"
   },
   {
     "id": 6,
