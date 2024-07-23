@@ -1,9 +1,11 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import DataSkill from "../../utils/skill.json";
+import Sphere from "../Sphere";
 const SectionSkill = () => {
   return (
     <div className="bg-dark p-5" id="skills">
+      <Sphere />
       <h2
         className="text-white text-center fw-bold"
         style={{ letterSpacing: "3px" }}

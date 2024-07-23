@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import ReactGlobe from "react-globe";
+
 const SectionContact = () => {
   return (
     <div className="bg-dark p-5" id="contact">
