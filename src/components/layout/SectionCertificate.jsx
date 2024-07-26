@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import certificateData from "../../utils/certificate.json";
 import { Pagination, Card, Row, Col } from "react-bootstrap";
 
-const SectionCertificate = () => {
+const SectionCertificate = (props) => {
+  const { setModalShow, setAssets } = props;
   const [activePage, setActivePage] = useState(1);
   const itemsPerPage = 6;
   const totalPages = Math.ceil(certificateData.length / itemsPerPage);
@@ -21,6 +22,10 @@ const SectionCertificate = () => {
       </Pagination.Item>
     );
   }
+  const openModal = (param) => {
+    setModalShow(true);
+    setAssets(param);
+  };
 
   return (
     <div className="bg-dark p-5" id="certificate">
@@ -35,7 +40,10 @@ const SectionCertificate = () => {
           .slice((activePage - 1) * itemsPerPage, activePage * itemsPerPage)
           .map((certificate, index) => (
             <Col key={index}>
-              <Card className="h-100 text-center text-white border-dark shadow-sm">
+              <Card
+                className="h-100 text-center text-white border-dark shadow-sm"
+                onClick={() => openModal(certificate.pdf)}
+              >
                 <Card.ImgOverlay></Card.ImgOverlay>
                 <h1 className="text-dark">{certificate.name}</h1>
               </Card>
