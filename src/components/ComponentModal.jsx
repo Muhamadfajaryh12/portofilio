@@ -1,11 +1,29 @@
 import React, { useState } from "react";
+import SectionExperience from "./layout/SectionExperience";
+import SectionProject from "./layout/SectionProject";
+import SectionSkill from "./layout/SectionSkill";
+import SectionCertificate from "./layout/SectionCertificate";
 
 const ComponentModal = (props) => {
-  const { onHide, onClose } = props;
+  const { onHide, onClose, content } = props;
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [modalPosition, setModalPosition] = useState({ top: 100, left: 100 });
   const [isDragging, setIsDragging] = useState(false);
-
+  console.log(content);
+  const renderContent = (content) => {
+    switch (content) {
+      case "Pengalaman":
+        return <SectionExperience />;
+      case "Project":
+        return <SectionProject />;
+      case "Keahlian":
+        return <SectionSkill />;
+      case "Sertifikat":
+        return <SectionCertificate />;
+      default:
+        return;
+    }
+  };
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setPosition({
@@ -31,7 +49,7 @@ const ComponentModal = (props) => {
       className="rounded bg-dark text-white"
       style={{
         width: "1200px",
-        height: "400px",
+        height: "auto",
         position: "absolute",
         top: modalPosition.top + "px",
         left: modalPosition.left + "px",
@@ -71,7 +89,7 @@ const ComponentModal = (props) => {
             style={{ width: "10px", height: "10px" }}
           ></div>
         </div>
-        <h5 style={{ fontWeight: "500", margin: "0" }}>Pengalaman</h5>
+        <h5 style={{ fontWeight: "500", margin: "0" }}>{content}</h5>
         <div className="d-flex gap-1 m-1">
           <div
             className="rounded bg-danger"
@@ -87,7 +105,9 @@ const ComponentModal = (props) => {
           ></div>
         </div>
       </div>
-      <div className="p-4"></div>
+      <div className="p-4" style={{ maxHeight: "400px;", overflow: "auto" }}>
+        {renderContent(content)}
+      </div>
     </div>
   );
 };

@@ -2,12 +2,12 @@
   {
     "nama": "HTML",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/html_logo.png"
   },
   {
     "nama": "CSS",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/css_logo.png"
   },
   {
     "nama": "Sass",
@@ -17,37 +17,37 @@
   {
     "nama": "JavaScript",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/javascript_logo.png"
   },
   {
     "nama": "TypeScript",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/typescript_logo.png"
   },
   {
     "nama": "PHP",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/php_logo.png"
   },
   {
     "nama": "CodeIgniter",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/codeigniter_logo.webp"
   },
   {
     "nama": "Laravel",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/laravel_logo.png"
   },
   {
     "nama": "React",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/react_logo.png"
   },
   {
     "nama": "Express",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/express_logo.png"
   },
   {
     "nama": "Hapi",
@@ -67,22 +67,22 @@
   {
     "nama": "Vite",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/vite_logo.png"
   },
   {
     "nama": "Node JS",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/nodejs_logo.webp"
   },
   {
     "nama": "Bootstrap",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/bootstrap_logo.png"
   },
   {
     "nama": "Tailwind",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/tailwind_logo.png"
   },
   {
     "nama": "MySQL",
@@ -92,7 +92,7 @@
   {
     "nama": "PostgreSQL",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/postgresql_logo.png"
   },
   {
     "nama": "MsSQL",
@@ -102,7 +102,7 @@
   {
     "nama": "MongoDB",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/MongoDB_logo.png"
   },
   {
     "nama": "Kotlin",

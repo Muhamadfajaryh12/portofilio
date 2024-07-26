@@ -16,11 +16,15 @@ function App() {
   const [modalShow, setModalShow] = useState(false);
   const [assets, setAssets] = useState("");
   const [shortcut, setShortcut] = useState([]);
+  const [title, setTitle] = useState("");
   const handleDataFromChild = (data) => {
     const newShortcut = [...shortcut, data];
     setShortcut(newShortcut);
   };
-
+  const handleDataContent = (data) => {
+    setTitle(data);
+  };
+  console.log(title);
   const handleClose = () => {
     setModalShow(false);
     setShortcut([]);
@@ -36,19 +40,21 @@ function App() {
       <SectionContact />
       <Footer />
      */}
-      {/* <MainLayout
+      <MainLayout
         setModalShow={setModalShow}
         handleShortcut={handleDataFromChild}
+        handleContent={handleDataContent}
       />
-      <Footer data={shortcut} />
+      <Footer data={shortcut} setModalShow={setModalShow} />
       {modalShow && (
         <ComponentModal
           show={modalShow}
           onHide={() => setModalShow(false)}
           onClose={() => handleClose()}
+          content={title}
         />
-      )} */}
-      <LoadingPage />
+      )}
+      {/* <LoadingPage /> */}
     </>
   );
 }

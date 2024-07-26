@@ -2,10 +2,11 @@ import React from "react";
 import Wallpaper from "../../assets/wallpaper.webp";
 import ShortcutJSON from "../../utils/shortcut.json";
 const MainLayout = (props) => {
-  const { setModalShow, handleShortcut } = props;
+  const { setModalShow, handleShortcut, handleContent } = props;
   const openModal = (data) => {
     setModalShow(true);
     handleShortcut(data);
+    handleContent(data.nama);
   };
   return (
     <div

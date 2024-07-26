@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
 const Footer = (props) => {
-  const { data } = props;
-  console.log(data);
+  const { data, setModalShow } = props;
   const [battery, setBattery] = useState(null);
   const [date, setDate] = useState(new Date());
   const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const openModal = () => {
+    setModalShow(true);
+  };
   useEffect(() => {
     function handleOnline() {
       setIsOnline(true);
@@ -51,7 +53,11 @@ const Footer = (props) => {
     <div className="text-center bg-dark text-white p-2 fw-semibold d-flex justify-content-between">
       <div className="d-flex align-items-center gap-1">
         {data.map((item) => (
-          <button className="d-flex gap-1 justify-content-evenly align-items-center bg-transparent border-0 text-white">
+          <button
+            key={item.id}
+            className="d-flex gap-1 justify-content-evenly align-items-center bg-transparent border-0 text-white"
+            onClick={openModal}
+          >
             <img src={item.image} alt="" style={{ width: "20px" }} />
             <small>{item.nama}</small>
           </button>

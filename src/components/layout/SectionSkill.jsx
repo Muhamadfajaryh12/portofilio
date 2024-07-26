@@ -4,25 +4,24 @@ import DataSkill from "../../utils/skill.json";
 import Sphere from "../Sphere";
 const SectionSkill = () => {
   return (
-    <div className="bg-dark p-5" id="skills">
-      <Sphere />
-      <h2
-        className="text-white text-center fw-bold"
-        style={{ letterSpacing: "3px" }}
-      >
-        - SKILLS -
-      </h2>
-      <div className="p-5">
-        <Row xs={1} sm={3} md={5} className="g-4">
+    <div id="skills">
+      <div className="">
+        <Row xs={1} sm={3} md={6} className="g-4">
           {DataSkill.map((item, index) => (
             <Col key={index}>
-              <Card className="h-100 text-center bg-transparent text-white shadow-lg border-secondary">
-                <Card.Img variant="top" src="holder.js/100px180" />{" "}
-                <Card.Body>
-                  <Card.Title>{item.nama}</Card.Title>
-                  <Card.Text>{item.level}</Card.Text>
-                </Card.Body>
-              </Card>
+              <div className="d-flex flex-column justify-content-center align-items-center">
+                <img
+                  src={item.image}
+                  alt=""
+                  style={{ width: "40px", height: "40px" }}
+                />
+                <small
+                  style={{ fontSize: "12px", fontWeight: "500" }}
+                  className="text-center"
+                >
+                  {item.nama}
+                </small>
+              </div>
             </Col>
           ))}
         </Row>
