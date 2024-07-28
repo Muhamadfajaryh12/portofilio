@@ -108,13 +108,7 @@ const SectionExperience = () => {
   });
 
   return (
-    <div className="bg-dark p-5" id="experience">
-      <h2
-        className="text-white text-center fw-bold"
-        style={{ letterSpacing: "3px" }}
-      >
-        - EXPERIENCE -
-      </h2>
+    <div className="bg-dark " id="experience">
       <div className="d-flex justify-content-center">
         <div
           style={{ maxWidth: "1400px", minWidth: "1000px", overflow: "auto" }}

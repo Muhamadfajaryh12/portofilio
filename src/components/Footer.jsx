@@ -1,14 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import { CiWifiOff, CiWifiOn } from "react-icons/ci";
 
 const Footer = (props) => {
-  const { data, setModalShow } = props;
+  const { data, setModalShow, active, setUniqueId, handleContent } = props;
   const [battery, setBattery] = useState(null);
   const [date, setDate] = useState(new Date());
   const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const openModal = () => {
-    setModalShow(true);
+
+  const openModal = (data) => {
+    setModalShow({ ...data, uniqueId: data.uniqueId, title: data.nama });
+    setUniqueId(data.uniqueId);
+    handleContent(data.nama);
   };
   useEffect(() => {
     function handleOnline() {
@@ -50,30 +54,36 @@ const Footer = (props) => {
   }, []);
 
   return (
-    <div className="text-center bg-dark text-white p-2 fw-semibold d-flex justify-content-between">
-      <div className="d-flex align-items-center gap-1">
-        {data.map((item) => (
-          <button
-            key={item.id}
-            className="d-flex gap-1 justify-content-evenly align-items-center bg-transparent border-0 text-white"
-            onClick={openModal}
-          >
-            <img src={item.image} alt="" style={{ width: "20px" }} />
-            <small>{item.nama}</small>
-          </button>
-        ))}
-      </div>
-      <div className="d-flex justify-content-end align-items-center gap-2">
-        <ProgressBar
-          variant="success"
-          now={battery}
-          style={{ width: "50px" }}
-          label={`${battery}%`}
-        />
-        <div className="">{isOnline ? "online" : "offline"}</div>
-        <div className="d-flex flex-column">
-          <small style={{ fontSize: "12px" }}>{getCurrentTime}</small>
-          <small style={{ fontSize: "12px" }}>{formattedDate}</small>
+    <div style={{ position: "absolute", width: "100%", bottom: "0" }}>
+      <div className="text-center bg-dark text-white p-2 fw-semibold d-flex justify-content-between">
+        <div className="d-flex align-items-center gap-1">
+          {data.map((item) => (
+            <button
+              key={item.id}
+              className={`d-flex gap-1 justify-content-evenly align-items-center  border-0 text-white ${
+                active ? "bg-dark  border-0" : "bg-transparent"
+              }`}
+              onClick={() => openModal(item)}
+            >
+              <img src={item.image} alt="" style={{ width: "20px" }} />
+              <small>{item.nama}</small>
+            </button>
+          ))}
+        </div>
+        <div className="d-flex justify-content-end align-items-center gap-2">
+          <ProgressBar
+            variant="success"
+            now={battery}
+            style={{ width: "30px", height: "10px", fontSize: "8px" }}
+            label={`${battery}%`}
+          />
+          <div className="text-white">
+            {isOnline ? <CiWifiOn className="text-white" /> : <CiWifiOff />}
+          </div>
+          <div className="d-flex flex-column">
+            <small style={{ fontSize: "12px" }}>{getCurrentTime}</small>
+            <small style={{ fontSize: "12px" }}>{formattedDate}</small>
+          </div>
         </div>
       </div>
     </div>

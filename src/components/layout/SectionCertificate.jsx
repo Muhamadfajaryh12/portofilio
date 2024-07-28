@@ -7,6 +7,7 @@ const SectionCertificate = (props) => {
   const [activePage, setActivePage] = useState(1);
   const itemsPerPage = 6;
   const totalPages = Math.ceil(certificateData.length / itemsPerPage);
+  console.log(certificateData);
   const handlePageClick = (page) => {
     setActivePage(page);
   };
@@ -22,37 +23,39 @@ const SectionCertificate = (props) => {
       </Pagination.Item>
     );
   }
-  const openModal = (param) => {
-    setModalShow(true);
-    setAssets(param);
-  };
 
   return (
     <div className="bg-dark p-5" id="certificate">
-      <h2
-        className="text-white text-center fw-bold"
-        style={{ letterSpacing: "3px" }}
-      >
-        - CERTIFICATE -
-      </h2>
       <Row md={3} className="g-4">
         {certificateData
           .slice((activePage - 1) * itemsPerPage, activePage * itemsPerPage)
           .map((certificate, index) => (
             <Col key={index}>
-              <Card
-                className="h-100 text-center text-white border-dark shadow-sm"
-                onClick={() => openModal(certificate.pdf)}
+              <a
+                href={certificate.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                <Card.ImgOverlay></Card.ImgOverlay>
-                <h1 className="text-dark">{certificate.name}</h1>
-              </Card>
+                <div className="d-flex justify-content-center flex-column align-items-center">
+                  <img
+                    src={certificate.image}
+                    style={{ width: "100px" }}
+                    alt=""
+                  />
+                  <small className="text-white text-center">
+                    {certificate.name}
+                  </small>
+                </div>
+              </a>
             </Col>
           ))}
       </Row>
-      <Pagination className="mt-4" size="sm">
-        {paginationItems}
-      </Pagination>
+      <div className="d-flex justify-content-center">
+        <Pagination className="mt-4" size="sm">
+          {paginationItems}
+        </Pagination>
+      </div>
     </div>
   );
 };

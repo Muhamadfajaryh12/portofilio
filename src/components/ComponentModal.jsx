@@ -5,7 +5,7 @@ import SectionSkill from "./layout/SectionSkill";
 import SectionCertificate from "./layout/SectionCertificate";
 
 const ComponentModal = (props) => {
-  const { onHide, onClose, content } = props;
+  const { onHide, onClose, content, uniqueId } = props;
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [modalPosition, setModalPosition] = useState({ top: 100, left: 100 });
   const [isDragging, setIsDragging] = useState(false);
@@ -24,6 +24,7 @@ const ComponentModal = (props) => {
         return;
     }
   };
+
   const handleMouseDown = (e) => {
     setIsDragging(true);
     setPosition({
@@ -57,12 +58,12 @@ const ComponentModal = (props) => {
         userSelect: "none",
       }}
     >
-      <div className="d-flex justify-content-end align-items-center">
+      <div className="d-flex justify-content-end align-items-center gap-2">
         <button onClick={onHide} className="bg-transparent border-0 text-white">
           =
         </button>
         <button
-          onClick={onClose}
+          onClick={() => onClose(uniqueId)}
           className="bg-transparent border-0 text-white"
         >
           x

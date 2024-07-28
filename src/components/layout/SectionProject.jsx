@@ -16,13 +16,7 @@ const SectionProject = (props) => {
     ? data.filter((item) => item.category == category)
     : data;
   return (
-    <div className="bg-dark p-5" id="project">
-      <h2
-        className="text-white text-center fw-bold"
-        style={{ letterSpacing: "3px" }}
-      >
-        - PROJECT -
-      </h2>
+    <div className="bg-dark" id="project">
       <Nav fill variant="tabs" defaultActiveKey="" className="my-4">
         <Nav.Item>
           <Nav.Link eventKey="link-1" onClick={typeClick("real")}>
@@ -35,7 +29,7 @@ const SectionProject = (props) => {
           </Nav.Link>
         </Nav.Item>
       </Nav>
-      <Row xs={1} sm={2} md={3} className="g-4">
+      <Row xs={1} sm={2} md={5} className="g-4">
         {filteredData.map((item, index) => (
           <Col key={index}>
             <OverlayTrigger

@@ -1,22 +1,17 @@
 import "./App.css";
-import Banner from "./components/Banner";
 import ComponentModal from "./components/ComponentModal";
 import Footer from "./components/Footer";
 import MainLayout from "./components/layout/MainLayout";
-import Section from "./components/layout/Section";
-import SectionCertificate from "./components/layout/SectionCertificate";
-import SectionContact from "./components/layout/SectionContact";
-import SectionExperience from "./components/layout/SectionExperience";
-import SectionProject from "./components/layout/SectionProject";
-import SectionSkill from "./components/layout/SectionSkill";
-import NavBar from "./components/Navbar";
+import Wallpaper from "./assets/wallpaper.webp";
 import { useState } from "react";
 import LoadingPage from "./pages/LoadingPage";
 function App() {
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState([]);
   const [assets, setAssets] = useState("");
   const [shortcut, setShortcut] = useState([]);
   const [title, setTitle] = useState("");
+  const [uniqueID, setUniqueID] = useState(1);
+
   const handleDataFromChild = (data) => {
     const newShortcut = [...shortcut, data];
     setShortcut(newShortcut);
@@ -24,10 +19,27 @@ function App() {
   const handleDataContent = (data) => {
     setTitle(data);
   };
-  console.log(title);
-  const handleClose = () => {
-    setModalShow(false);
-    setShortcut([]);
+  const handleOpenModal = (data) => {
+    setUniqueID(uniqueID + 1);
+    setModalShow([...modalShow, data]);
+  };
+  const handleClose = (uniqueId) => {
+    const updatedModals = modalShow.filter(
+      (modal) => modal.uniqueId !== uniqueId
+    );
+    const updatedShortcut = shortcut.filter(
+      (item) => item.uniqueId !== uniqueId
+    );
+    setModalShow(updatedModals);
+    setShortcut(updatedShortcut);
+  };
+
+  const handleHide = (uniqueId) => {
+    const updatedModals = modalShow.filter(
+      (modal) => modal.uniqueId !== uniqueId
+    );
+
+    setModalShow(updatedModals);
   };
   return (
     <>
@@ -40,20 +52,39 @@ function App() {
       <SectionContact />
       <Footer />
      */}
-      <MainLayout
-        setModalShow={setModalShow}
-        handleShortcut={handleDataFromChild}
-        handleContent={handleDataContent}
-      />
-      <Footer data={shortcut} setModalShow={setModalShow} />
-      {modalShow && (
-        <ComponentModal
-          show={modalShow}
-          onHide={() => setModalShow(false)}
-          onClose={() => handleClose()}
-          content={title}
+      <div
+        style={{
+          backgroundImage: `url(${Wallpaper})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "100vh",
+        }}
+      >
+        <MainLayout
+          setModalShow={handleOpenModal}
+          handleShortcut={handleDataFromChild}
+          handleContent={handleDataContent}
+          uniqueID={uniqueID}
+          setUniqueID={setUniqueID}
         />
-      )}
+        <Footer
+          data={shortcut}
+          setModalShow={handleOpenModal}
+          active={modalShow}
+          handleContent={handleDataContent}
+          setUniqueId={setUniqueID}
+        />
+      </div>
+      {modalShow.map((modal) => (
+        <ComponentModal
+          key={modal.id}
+          show={true}
+          onHide={() => handleHide(modal.uniqueId)}
+          onClose={() => handleClose(modal.uniqueId)}
+          content={modal.title}
+          uniqueId={modal.id}
+        />
+      ))}
       {/* <LoadingPage /> */}
     </>
   );
