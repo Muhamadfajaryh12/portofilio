@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/windows.png";
-const LoadingPage = () => {
+const LoadingPage = (props) => {
+  const { setLoadingComplete } = props;
   const [loading, setLoading] = useState(0);
 
   useEffect(() => {
@@ -12,10 +13,12 @@ const LoadingPage = () => {
         }
         return prevLoading + 1;
       });
-    }, 100);
-
+    }, 50);
     return () => clearInterval(intervalId);
   }, []);
+  if (loading == 100) {
+    setLoadingComplete(true);
+  }
   return (
     <div className="bg-dark text-white" style={{ height: "100vh" }}>
       <div className="d-flex justify-content-center">

@@ -1,61 +1,28 @@
 import React, { useEffect, useState } from "react";
 import certificateData from "../../utils/certificate.json";
-import { Pagination, Card, Row, Col } from "react-bootstrap";
 
-const SectionCertificate = (props) => {
-  const { setModalShow, setAssets } = props;
-  const [activePage, setActivePage] = useState(1);
-  const itemsPerPage = 6;
-  const totalPages = Math.ceil(certificateData.length / itemsPerPage);
-  console.log(certificateData);
-  const handlePageClick = (page) => {
-    setActivePage(page);
-  };
-  const paginationItems = [];
-  for (let number = 1; number <= totalPages; number++) {
-    paginationItems.push(
-      <Pagination.Item
-        key={number}
-        active={number === activePage}
-        onClick={() => handlePageClick(number)}
-      >
-        {number}
-      </Pagination.Item>
-    );
-  }
-
+const SectionCertificate = ({ item }) => {
   return (
-    <div className="bg-dark p-5" id="certificate">
-      <Row md={3} className="g-4">
-        {certificateData
-          .slice((activePage - 1) * itemsPerPage, activePage * itemsPerPage)
-          .map((certificate, index) => (
-            <Col key={index}>
-              <a
-                href={certificate.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-              >
-                <div className="d-flex justify-content-center flex-column align-items-center">
-                  <img
-                    src={certificate.image}
-                    style={{ width: "100px" }}
-                    alt=""
-                  />
-                  <small className="text-white text-center">
-                    {certificate.name}
-                  </small>
-                </div>
-              </a>
-            </Col>
-          ))}
-      </Row>
-      <div className="d-flex justify-content-center">
-        <Pagination className="mt-4" size="sm">
-          {paginationItems}
-        </Pagination>
-      </div>
+    <div className="p-2">
+      <h6 className="text-gray-200 ">{item}</h6>
+      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+        {certificateData.map((item) => (
+          <li className="mb-10 ms-4" key={item.name}>
+            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              {item.name}
+            </time>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              Application UI code in Tailwind CSS
+            </h3>
+            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+              Get access to over 20+ pages including a dashboard layout, charts,
+              kanban board, calendar, and pre-order E-commerce & Marketing
+              pages.
+            </p>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 };

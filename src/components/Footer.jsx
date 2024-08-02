@@ -14,6 +14,7 @@ const Footer = (props) => {
     setUniqueId(data.uniqueId);
     handleContent(data.nama);
   };
+
   useEffect(() => {
     function handleOnline() {
       setIsOnline(true);

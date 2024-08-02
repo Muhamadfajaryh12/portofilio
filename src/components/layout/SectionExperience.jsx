@@ -1,194 +1,26 @@
 import React from "react";
+import ExperienceData from "../../utils/experience.json";
 
-const data = [
-  {
-    year: "2022",
-    month: "Aug",
-    activity: "Study Independent",
-  },
-  {
-    year: "2022",
-    month: "Sep",
-    activity: "Study Independent",
-  },
-  {
-    year: "2022",
-    month: "Oct",
-    activity: "Study Independent",
-  },
-  {
-    year: "2022",
-    month: "Nov",
-    activity: "Study Independent",
-  },
-  {
-    year: "2022",
-    month: "Dec",
-    activity: "Study Independent",
-  },
-  {
-    year: "2023",
-    month: "Jan",
-    activity: "Study Independent",
-  },
-  {
-    year: "2023",
-    month: "Apr",
-    activity: "Competition Semantics",
-  },
-  {
-    year: "2023",
-    month: "Aug",
-    activity: "Study Independent & Internship",
-  },
-  {
-    year: "2023",
-    month: "Sep",
-    activity: "Study Independent & Internship",
-  },
-  {
-    year: "2023",
-    month: "Oct",
-    activity: "Study Independent & Internship",
-  },
-  {
-    year: "2023",
-    month: "Nov",
-    activity: "Study Independent",
-  },
-  {
-    year: "2023",
-    month: "Dec",
-    activity: "Study Independent",
-  },
-  {
-    year: "2024",
-    month: "Jan",
-    activity: "Study Independent",
-  },
-  {
-    year: "2024",
-    month: "Feb",
-    activity: "Internship",
-  },
-  {
-    year: "2024",
-    month: "Mar",
-    activity: "Internship",
-  },
-  {
-    year: "2024",
-    month: "Apr",
-    activity: "Internship",
-  },
-  {
-    year: "2024",
-    month: "May",
-    activity: "Internship",
-  },
-  {
-    year: "2024",
-    month: "Jun",
-    activity: "Internship",
-  },
-  {
-    year: "2024",
-    month: "Jul",
-    activity: "Internship",
-  },
-];
-
-const SectionExperience = () => {
-  const groupedData = {};
-  data.forEach((item) => {
-    if (!groupedData[item.year]) {
-      groupedData[item.year] = [];
-    }
-    groupedData[item.year].push({ month: item.month, activity: item.activity });
-  });
-
+const SectionExperience = ({ item }) => {
   return (
-    <div className="bg-dark " id="experience">
-      <div className="d-flex justify-content-center">
-        <div
-          style={{ maxWidth: "1400px", minWidth: "1000px", overflow: "auto" }}
-        >
-          <table className="table bg-transparent border-secondary table-bordered text-center">
-            <thead>
-              <tr>
-                <th className="bg-transparent text-white">Timeline</th>
-                <th className="bg-transparent text-white">Jan</th>
-                <th className="bg-transparent text-white">Feb</th>
-                <th className="bg-transparent text-white">Mar</th>
-                <th className="bg-transparent text-white">Apr</th>
-                <th className="bg-transparent text-white">May</th>
-                <th className="bg-transparent text-white">Jun</th>
-                <th className="bg-transparent text-white">Jul</th>
-                <th className="bg-transparent text-white">Aug</th>
-                <th className="bg-transparent text-white">Sep</th>
-                <th className="bg-transparent text-white">Oct</th>
-                <th className="bg-transparent text-white">Nov</th>
-                <th className="bg-transparent text-white">Dec</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.keys(groupedData).map((year) => (
-                <tr key={year}>
-                  <td className="bg-transparent text-white">{year}</td>
-                  {[
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "May",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep",
-                    "Oct",
-                    "Nov",
-                    "Dec",
-                  ].map((month) => (
-                    <td
-                      key={`${year}-${month}`}
-                      className="bg-transparent text-white"
-                    >
-                      {groupedData[year].find(
-                        (item) => item.month === month
-                      ) ? (
-                        <button className=" btn btn-sm  ">
-                          <span
-                            className={`badge ${
-                              groupedData[year].find(
-                                (item) => item.month === month
-                              ).activity == "Internship"
-                                ? "bg-success"
-                                : groupedData[year].find(
-                                    (item) => item.month === month
-                                  ).activity == "Study Independent"
-                                ? "bg-primary"
-                                : "bg-danger"
-                            }`}
-                            style={{ width: "10px !important;" }}
-                          >
-                            {
-                              groupedData[year].find(
-                                (item) => item.month === month
-                              ).activity
-                            }
-                          </span>
-                        </button>
-                      ) : (
-                        ""
-                      )}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <div className="p-2">
+      <h6 className="text-gray-200 ">{item}</h6>
+      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+        {ExperienceData.map((item) => (
+          <li className="mb-10 ms-4" key={item.name}>
+            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+            <time className=" text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+              {item.date}
+            </time>
+            <h3 className="m-0 text-lg font-semibold text-white">
+              {item.name}
+            </h3>
+            <p className="m-0 text-base font-normal text-gray-500 dark:text-gray-400">
+              {item.level}
+            </p>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 };

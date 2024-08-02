@@ -6,7 +6,7 @@ const MainLayout = (props) => {
   const { setModalShow, handleShortcut, handleContent, uniqueID, setUniqueID } =
     props;
   const openModal = (data) => {
-    setModalShow({ ...data, uniqueId: uniqueID, title: data.nama });
+    setModalShow({ ...data, uniqueId: uniqueID + 1, title: data.nama });
     handleShortcut({ ...data, uniqueId: uniqueID + 1 });
     handleContent(data.nama);
     setUniqueID(uniqueID + 1);

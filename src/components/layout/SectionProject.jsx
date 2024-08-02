@@ -3,50 +3,24 @@ import { useState } from "react";
 import { Card, Col, Row, Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
 import data from "../../utils/project.json";
 
-const SectionProject = (props) => {
-  const { setModalShow } = props;
-  const [category, setCategory] = useState("real");
-  const typeClick = (props) => () => {
-    setCategory(props);
-  };
-  const openModal = () => {
-    setModalShow(true);
-  };
-  const filteredData = category
-    ? data.filter((item) => item.category == category)
-    : data;
+const SectionProject = ({ item }) => {
   return (
-    <div className="bg-dark" id="project">
-      <Nav fill variant="tabs" defaultActiveKey="" className="my-4">
-        <Nav.Item>
-          <Nav.Link eventKey="link-1" onClick={typeClick("real")}>
-            Real Project
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2" onClick={typeClick("dummy")}>
-            Dummy Project
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-      <Row xs={1} sm={2} md={5} className="g-4">
-        {filteredData.map((item, index) => (
-          <Col key={index}>
-            <OverlayTrigger
-              placement="bottom"
-              overlay={<Tooltip>{item.name}</Tooltip>}
-            >
-              <Card
-                className="h-100 text-center text-white border-dark shadow-sm"
-                onClick={openModal}
-              >
-                <Card.Img src={item.image} alt="Card image" />
-                <Card.ImgOverlay></Card.ImgOverlay>
-              </Card>
-            </OverlayTrigger>
-          </Col>
+    <div className="p-2">
+      <h6 className="text-gray-200 ">{item}</h6>
+      <ol className="relative border-s border-gray-200 dark:border-gray-700">
+        {data.map((item) => (
+          <li className="mb-10 ms-4" key={item.id}>
+            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+            <h3 className="text-lg font-semibold text-white">{item.name} </h3>
+            <img src={item.image} alt="" className="w-32" />
+            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+              Get access to over 20+ pages including a dashboard layout, charts,
+              kanban board, calendar, and pre-order E-commerce & Marketing
+              pages.
+            </p>
+          </li>
         ))}
-      </Row>
+      </ol>
     </div>
   );
 };
