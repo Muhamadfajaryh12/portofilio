@@ -1,6 +1,6 @@
 import React from "react";
 
-const Banner = () => {
+const Banner = ({ isActive }) => {
   return (
     <div className="  text-white p-5">
       <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
@@ -14,14 +14,26 @@ const Banner = () => {
         experience.
       </h6>
       <div className="">
-        <ul className="fw-bold opacity-50">
-          <li className="opacity-100">PENGALAMAN</li>
-          <li>KEAHLIAN</li>
-          <li>PROJECT</li>
-          <li>SERTIFIKAT</li>
+        <ul className="fw-bold" style={{ letterSpacing: "3px" }}>
+          <li
+            className={isActive == "experience" ? `opacity-100` : `opacity-50`}
+          >
+            PENGALAMAN
+          </li>
+          <li className={isActive == "skill" ? `opacity-100` : `opacity-50`}>
+            KEAHLIAN
+          </li>
+          <li className={isActive == "project" ? `opacity-100` : `opacity-50`}>
+            PROJECT
+          </li>
+          <li
+            className={isActive == "certificate" ? `opacity-100` : `opacity-50`}
+          >
+            SERTIFIKAT
+          </li>
         </ul>
       </div>
-      <button className="btn bg-white">DOWNLOAD CV</button>
+      <button className="btn bg-white ">DOWNLOAD CV</button>
     </div>
   );
 };

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import certificateData from "../../utils/certificate.json";
 
-const SectionCertificate = ({ item }) => {
+const SectionCertificate = ({ item, isActive }) => {
+  console.log(isActive);
   return (
-    <div className="p-2">
+    <div className={`mt-10 section ${isActive ? "opacity-100" : "opacity-50"}`}>
       <h6 className="text-gray-200 ">{item}</h6>
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         {certificateData.map((item) => (

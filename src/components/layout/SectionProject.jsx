@@ -3,9 +3,11 @@ import { useState } from "react";
 import { Card, Col, Row, Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
 import data from "../../utils/project.json";
 
-const SectionProject = ({ item }) => {
+const SectionProject = ({ item, isActive }) => {
+  console.log(isActive);
+
   return (
-    <div className="p-2">
+    <div className={`section ${isActive ? "opacity-100" : "opacity-50"}`}>
       <h6 className="text-gray-200 ">{item}</h6>
       <ol className="relative border-s border-gray-200 dark:border-gray-700">
         {data.map((item) => (

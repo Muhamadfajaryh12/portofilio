@@ -2,14 +2,16 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import DataSkill from "../../utils/skill.json";
 import Sphere from "../Sphere";
-const SectionSkill = ({ item }) => {
+const SectionSkill = ({ item, isActive }) => {
+  console.log(isActive);
+
   return (
-    <div className="">
+    <div className={`section ${isActive ? "opacity-100" : "opacity-50"}`}>
       <h6 className="text-gray-200">{item}</h6>
       <div className="d-flex flex-wrap ">
         {DataSkill.map((item, index) => (
           <div key={index}>
-            <div className="d-flex gap-2 justify-content-center align-items-center m-2 border-1 border-gray-100 w-auto p-1">
+            <div className="d-flex gap-2 justify-content-center align-items-center m-2 border-1 border-gray-800 w-auto p-1 shadow-lg">
               <img
                 src={item.image}
                 alt=""

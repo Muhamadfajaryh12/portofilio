@@ -2,12 +2,12 @@
   {
     "nama": "HTML",
     "level": "Advanced",
-    "image": "src/assets/html_logo.png"
+    "image": "src/assets/html_logo.webp"
   },
   {
     "nama": "CSS",
     "level": "Advanced",
-    "image": "src/assets/css_logo.png"
+    "image": "src/assets/css_logo.webp"
   },
   {
     "nama": "Sass",
@@ -17,17 +17,17 @@
   {
     "nama": "JavaScript",
     "level": "Advanced",
-    "image": "src/assets/javascript_logo.png"
+    "image": "src/assets/javascript_logo.webp"
   },
   {
     "nama": "TypeScript",
     "level": "Advanced",
-    "image": "src/assets/typescript_logo.png"
+    "image": "src/assets/typescript_logo.webp"
   },
   {
     "nama": "PHP",
     "level": "Advanced",
-    "image": "src/assets/php_logo.png"
+    "image": "src/assets/php_logo.webp"
   },
   {
     "nama": "CodeIgniter",
@@ -37,22 +37,17 @@
   {
     "nama": "Laravel",
     "level": "Intermediate",
-    "image": "src/assets/laravel_logo.png"
+    "image": "src/assets/laravel_logo.webp"
   },
   {
     "nama": "React",
     "level": "Advanced",
-    "image": "src/assets/react_logo.png"
+    "image": "src/assets/react_logo.webp"
   },
   {
     "nama": "Express",
     "level": "Intermediate",
-    "image": "src/assets/express_logo.png"
-  },
-  {
-    "nama": "Hapi",
-    "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/express_logo.webp"
   },
   {
     "nama": "Webpack",
@@ -67,7 +62,7 @@
   {
     "nama": "Vite",
     "level": "Intermediate",
-    "image": "src/assets/vite_logo.png"
+    "image": "src/assets/vite_logo.webp"
   },
   {
     "nama": "Node JS",
@@ -77,12 +72,12 @@
   {
     "nama": "Bootstrap",
     "level": "Advanced",
-    "image": "src/assets/bootstrap_logo.png"
+    "image": "src/assets/bootstrap_logo.webp"
   },
   {
     "nama": "Tailwind",
     "level": "Advanced",
-    "image": "src/assets/tailwind_logo.png"
+    "image": "src/assets/tailwind_logo.webp"
   },
   {
     "nama": "MySQL",
@@ -92,7 +87,7 @@
   {
     "nama": "PostgreSQL",
     "level": "Intermediate",
-    "image": "src/assets/postgresql_logo.png"
+    "image": "src/assets/postgresql_logo.webp"
   },
   {
     "nama": "MsSQL",
@@ -102,16 +97,6 @@
   {
     "nama": "MongoDB",
     "level": "Intermediate",
-    "image": "src/assets/MongoDB_logo.png"
-  },
-  {
-    "nama": "Kotlin",
-    "level": "Intermediate",
-    "image": ""
-  },
-  {
-    "nama": "Jetpack Compose",
-    "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/MongoDB_logo.webp"
   }
 ]

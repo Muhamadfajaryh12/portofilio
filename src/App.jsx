@@ -1,100 +1,86 @@
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
-import ComponentModal from "./components/ComponentModal";
-import Footer from "./components/Footer";
-import MainLayout from "./components/layout/MainLayout";
-import Wallpaper from "./assets/wallpaper.webp";
-import { useState } from "react";
-import LoadingPage from "./pages/LoadingPage";
 import Banner from "./components/Banner";
-import Section from "./components/layout/Section";
 import SectionCertificate from "./components/layout/SectionCertificate";
 import SectionExperience from "./components/layout/SectionExperience";
 import SectionProject from "./components/layout/SectionProject";
 import SectionSkill from "./components/layout/SectionSkill";
+
 function App() {
-  const [modalShow, setModalShow] = useState([]);
-  const [assets, setAssets] = useState("");
-  const [shortcut, setShortcut] = useState([]);
-  const [title, setTitle] = useState("");
-  const [uniqueID, setUniqueID] = useState(1);
+  const [activeSection, setActiveSection] = useState("");
 
-  const [loadingComplete, setLoadingComplete] = useState(false);
+  const sectionRefs = {
+    experience: useRef(null),
+    skill: useRef(null),
+    project: useRef(null),
+    certificate: useRef(null),
+  };
 
-  const handleDataFromChild = (data) => {
-    const newShortcut = [...shortcut, data];
-    setShortcut(newShortcut);
-  };
-  const handleDataContent = (data) => {
-    setTitle(data);
-  };
-  const handleOpenModal = (data) => {
-    setUniqueID(uniqueID + 1);
-    setModalShow([...modalShow, data]);
-  };
-  const handleClose = (uniqueId) => {
-    const updatedModals = modalShow.filter(
-      (modal) => modal.uniqueId !== uniqueId
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+            console.log(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
     );
-    const updatedShortcut = shortcut.filter(
-      (item) => item.uniqueId !== uniqueId
-    );
-    setModalShow(updatedModals);
-    setShortcut(updatedShortcut);
-  };
+    const sections = Object.values(sectionRefs);
+    sections.forEach((section) => {
+      if (section.current) {
+        observer.observe(section.current);
+      }
+    });
+    console.log(activeSection);
 
-  const handleHide = (uniqueId) => {
-    const updatedModals = modalShow.filter(
-      (modal) => modal.uniqueId !== uniqueId
-    );
-
-    setModalShow(updatedModals);
-  };
+    return () => {
+      sections.forEach((section) => {
+        if (section.current) {
+          observer.unobserve(section.current);
+        }
+      });
+    };
+  }, []);
+  useEffect(() => {
+    if (activeSection) {
+      sectionRefs[activeSection].current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, [activeSection]);
   return (
     <>
-      {/* {loadingComplete ? (
-        <div
-          style={{
-            backgroundImage: `url(${Wallpaper})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100vh",
-          }}
-        >
-          <MainLayout
-            setModalShow={handleOpenModal}
-            handleShortcut={handleDataFromChild}
-            handleContent={handleDataContent}
-            uniqueID={uniqueID}
-            setUniqueID={setUniqueID}
-          />
-          <Footer
-            data={shortcut}
-            setModalShow={handleOpenModal}
-            active={modalShow}
-            handleContent={handleDataContent}
-            setUniqueId={setUniqueID}
-          />
-          {modalShow.map((modal) => (
-            <ComponentModal
-              key={modal.id}
-              show={true}
-              onHide={() => handleHide(modal.uniqueId)}
-              onClose={() => handleClose(modal.uniqueId)}
-              content={modal.title}
-              uniqueId={modal.id}
-            />
-          ))}
-        </div>
-      ) : (
-        <LoadingPage setLoadingComplete={setLoadingComplete} />
-      )} */}
       <div className="bg-gray-900 w-screen h-screen d-flex">
-        <Banner />
+        <Banner isActive={activeSection} />
         <div className="h-screen overflow-auto w-1/2">
-          <SectionExperience item="PENGALAMAN" />
-          <SectionSkill item="KEAHLIAN" />
-          <SectionProject item="PROJECT" />
-          <SectionCertificate item="SERTIFIKAT" />
+          <div ref={sectionRefs.experience} id="experience" className="mt-32">
+            <SectionExperience
+              item="PENGALAMAN"
+              isActive={activeSection === "experience"}
+            />
+          </div>
+          <div ref={sectionRefs.skill} id="skill" className="my-32">
+            <SectionSkill
+              item="KEAHLIAN"
+              isActive={activeSection === "skill"}
+            />
+          </div>
+          <div ref={sectionRefs.project} id="project" className="mt-32">
+            <SectionProject
+              item="PROJECT"
+              isActive={activeSection === "project"}
+            />
+          </div>
+          <div ref={sectionRefs.certificate} id="certificate" className="mt-32">
+            <SectionCertificate
+              item="SERTIFIKAT"
+              isActive={activeSection === "certificate"}
+            />
+          </div>
         </div>
       </div>
     </>
