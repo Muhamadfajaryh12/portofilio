@@ -1,8 +1,8 @@
 import React from "react";
-
+import CV from "../assets/CV.pdf";
 const Banner = ({ isActive }) => {
   return (
-    <div className="  text-white p-5">
+    <div className="  text-white mt-32 ml-5 w-1/2">
       <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
       <h1 style={{ fontWeight: "bold" }}>
         I'm Muhamad Fajar Yudhistira Herjanto
@@ -33,7 +33,14 @@ const Banner = ({ isActive }) => {
           </li>
         </ul>
       </div>
-      <button className="btn bg-white ">DOWNLOAD CV</button>
+      <a
+        className=" bg-gray-100 text-dark font-semibold p-2 rounded-lg hover:bg-gray-300 "
+        href={CV}
+        download={true}
+        style={{ textDecoration: "none" }}
+      >
+        DOWNLOAD CV
+      </a>
     </div>
   );
 };

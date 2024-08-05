@@ -10,11 +10,6 @@
     "image": "src/assets/css_logo.webp"
   },
   {
-    "nama": "Sass",
-    "level": "Intermediate",
-    "image": ""
-  },
-  {
     "nama": "JavaScript",
     "level": "Advanced",
     "image": "src/assets/javascript_logo.webp"
@@ -52,12 +47,12 @@
   {
     "nama": "Webpack",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/webpack.webp"
   },
   {
     "nama": "PWA",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/pwa_icon.webp"
   },
   {
     "nama": "Vite",
@@ -82,7 +77,7 @@
   {
     "nama": "MySQL",
     "level": "Advanced",
-    "image": ""
+    "image": "src/assets/mysql.webp"
   },
   {
     "nama": "PostgreSQL",
@@ -92,7 +87,7 @@
   {
     "nama": "MsSQL",
     "level": "Intermediate",
-    "image": ""
+    "image": "src/assets/mssql.webp"
   },
   {
     "nama": "MongoDB",

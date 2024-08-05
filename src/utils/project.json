@@ -3,74 +3,78 @@
     "id": 1,
     "name": "SIP Vision",
     "category": "real",
-    "image": "src/assets/sip_web.png"
+    "image": "src/assets/sip_web.png",
+    "describe": "SIP Vision merupakan sebuah website profile perusahaan yang berisikan informasi produk dan pengujian mata"
   },
   {
     "id": 2,
     "name": "E-Checklist",
     "category": "real",
-    "image": "src/assets/e_checklist_web.png"
+    "image": "src/assets/e_checklist_web.png",
+    "describe": "E-Checklist adalah sebuah aplikasi yang memungkinkan pengguna untuk membuat, mengelola, dan menyelesaikan daftar periksa secara digital."
   },
   {
     "id": 3,
     "name": "KKMI Manuflex Dashboard",
     "category": "real",
-    "image": "src/assets/kkmi_web.png"
+    "image": "src/assets/kkmi_web.png",
+    "describe": "KKMI Manuflex Dashboard adalah dashboard berbasis website yang dirancang untuk memonitoring kinerja produksi dan operasional dalam pabrik manufaktur"
   },
   {
     "id": 4,
     "name": "Admin Puri Hotel",
     "category": "real",
-    "image": "src/assets/hotel_web.png"
+    "image": "src/assets/hotel_web.png",
+    "describe": "Sebuah sistem yang dirancang untuk mengelola kamar, reservasi, dan layanan tamu di hotel "
   },
   {
     "id": 5,
     "name": "PM Scheduler",
     "category": "real",
-    "image": "src/assets/pmscheduler_web.png"
+    "image": "src/assets/pmscheduler_web.png",
+    "describe": "Sebuah website yang digunakan oleh Departement Maintenance untuk manajemen jadwal PM lalu memonitoring Andon dan Runtime Mesin serta kondisi mesin"
   },
   {
     "id": 6,
     "name": "E-Sparepart",
     "category": "real",
-    "image": "src/assets/esparepart_web.png"
+    "image": "src/assets/esparepart_web.png",
+    "describe": "Sistem yang berisikan catalog sparepart berbagai jenis mesin dan peralatan, sistem ini dirancang untuk mengelola inventaris sparepart "
   },
   {
     "id": 7,
     "name": "Maintenance Learning Center",
     "category": "real",
-    "image": "src/assets/learning_web.png"
+    "image": "src/assets/learning_web.png",
+    "describe": "Maintenance Learning Center adalah sebuah sistem yang berisikan modul, dokumentasi dan langkah panduan teknis mengenai prosedur perawatan dan pemeliharaan mesin "
   },
   {
     "id": 8,
     "name": "Master Checksheet",
     "category": "real",
-    "image": "src/assets/checksheet_web.png"
+    "image": "src/assets/checksheet_web.png",
+    "describe": "Sebuah sistem yang digunakan untuk membuat checksheet secara dinamis, sistem ini memungkinkan user untuk mendesain dan mengatur checksheet sesuai dengan kebutuhan "
   },
   {
     "id": 9,
     "name": "Production Control",
     "category": "real",
-    "image": "src/assets/production_web.png"
+    "image": "src/assets/production_web.png",
+    "describe": "Production Control adalah sebuah sistem yang dirancang untuk memonitoring proses produksi dan pengelolaan tiket Preventive Maintenance (PM)"
   },
   {
     "id": 6,
-    "name": "E-Sparepart",
-    "category": "dummy"
+    "name": "Capstone Project - Webeer",
+    "category": "dummy",
+    "image": "src/assets/webeer_web.png",
+
+    "describe": "Tugas Akhir MSIB dengan tema solusi ekonomi dengan membangun sebuah sistem berbasis Web App yang berisikan forum diskusi dan lowongan pekerjaan terkhusus bagi web programmer"
   },
   {
     "id": 7,
-    "name": "Maintenance Learning Center",
-    "category": "dummy"
-  },
-  {
-    "id": 8,
-    "name": "Master Checksheet",
-    "category": "dummy"
-  },
-  {
-    "id": 9,
-    "name": "Production Control",
-    "category": "dummy"
+    "name": "Capstone Project - EyeCare",
+    "category": "android",
+    "image": "src/assets/android.jpg",
+    "describe": "Tugas Akhir MSIB dengan tema solusi kesehatan dengan membangun sebuah sistem berbasis mobile yang berisikan catalog kacamata dan mendiagnosis buta warna"
   }
 ]

@@ -26,7 +26,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
     const sections = Object.values(sectionRefs);
     sections.forEach((section) => {
