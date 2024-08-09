@@ -2,96 +2,96 @@
   {
     "nama": "HTML",
     "level": "Advanced",
-    "image": "src/assets/html_logo.webp"
+    "image": "/assets/html_logo.webp"
   },
   {
     "nama": "CSS",
     "level": "Advanced",
-    "image": "src/assets/css_logo.webp"
+    "image": "/assets/css_logo.webp"
   },
   {
     "nama": "JavaScript",
     "level": "Advanced",
-    "image": "src/assets/javascript_logo.webp"
+    "image": "/assets/javascript_logo.webp"
   },
   {
     "nama": "TypeScript",
     "level": "Advanced",
-    "image": "src/assets/typescript_logo.webp"
+    "image": "/assets/typescript_logo.webp"
   },
   {
     "nama": "PHP",
     "level": "Advanced",
-    "image": "src/assets/php_logo.webp"
+    "image": "/assets/php_logo.webp"
   },
   {
     "nama": "CodeIgniter",
     "level": "Intermediate",
-    "image": "src/assets/codeigniter_logo.webp"
+    "image": "/assets/codeigniter_logo.webp"
   },
   {
     "nama": "Laravel",
     "level": "Intermediate",
-    "image": "src/assets/laravel_logo.webp"
+    "image": "/assets/laravel_logo.webp"
   },
   {
     "nama": "React",
     "level": "Advanced",
-    "image": "src/assets/react_logo.webp"
+    "image": "/assets/react_logo.webp"
   },
   {
     "nama": "Express",
     "level": "Intermediate",
-    "image": "src/assets/express_logo.webp"
+    "image": "/assets/express_logo.webp"
   },
   {
     "nama": "Webpack",
     "level": "Intermediate",
-    "image": "src/assets/webpack.webp"
+    "image": "/assets/webpack.webp"
   },
   {
     "nama": "PWA",
     "level": "Intermediate",
-    "image": "src/assets/pwa_icon.webp"
+    "image": "/assets/pwa_icon.webp"
   },
   {
     "nama": "Vite",
     "level": "Intermediate",
-    "image": "src/assets/vite_logo.webp"
+    "image": "/assets/vite_logo.webp"
   },
   {
     "nama": "Node JS",
     "level": "Intermediate",
-    "image": "src/assets/nodejs_logo.webp"
+    "image": "/assets/nodejs_logo.webp"
   },
   {
     "nama": "Bootstrap",
     "level": "Advanced",
-    "image": "src/assets/bootstrap_logo.webp"
+    "image": "/assets/bootstrap_logo.webp"
   },
   {
     "nama": "Tailwind",
     "level": "Advanced",
-    "image": "src/assets/tailwind_logo.webp"
+    "image": "/assets/tailwind_logo.webp"
   },
   {
     "nama": "MySQL",
     "level": "Advanced",
-    "image": "src/assets/mysql.webp"
+    "image": "/assets/mysql.webp"
   },
   {
     "nama": "PostgreSQL",
     "level": "Intermediate",
-    "image": "src/assets/postgresql_logo.webp"
+    "image": "/assets/postgresql_logo.webp"
   },
   {
     "nama": "MsSQL",
     "level": "Intermediate",
-    "image": "src/assets/mssql.webp"
+    "image": "/assets/mssql.webp"
   },
   {
     "nama": "MongoDB",
     "level": "Intermediate",
-    "image": "src/assets/MongoDB_logo.webp"
+    "image": "/assets/MongoDB_logo.webp"
   }
 ]

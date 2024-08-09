@@ -3,78 +3,253 @@
     "id": 1,
     "name": "SIP Vision",
     "category": "real",
-    "image": "src/assets/sip_web.png",
-    "describe": "SIP Vision merupakan sebuah website profile perusahaan yang berisikan informasi produk dan pengujian mata"
+    "image": "/assets/sip_web.png",
+    "describe": "SIP Vision merupakan sebuah website profile perusahaan yang berisikan informasi produk dan pengujian mata",
+    "tech": [
+      {
+        "name": "Vite"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Tailwind"
+      },
+      {
+        "name": "TypeScript"
+      }
+    ]
   },
   {
     "id": 2,
     "name": "E-Checklist",
     "category": "real",
-    "image": "src/assets/e_checklist_web.png",
-    "describe": "E-Checklist adalah sebuah aplikasi yang memungkinkan pengguna untuk membuat, mengelola, dan menyelesaikan daftar periksa secara digital."
+    "image": "/assets/e_checklist_web.png",
+    "describe": "E-Checklist adalah sebuah aplikasi yang memungkinkan pengguna untuk membuat, mengelola, dan menyelesaikan daftar periksa secara digital.",
+    "tech": [
+      {
+        "name": "Vite"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Tailwind"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "Laravel"
+      },
+      {
+        "name": "PWA"
+      },
+      {
+        "name": "PostgreSQL"
+      }
+    ]
   },
   {
     "id": 3,
     "name": "KKMI Manuflex Dashboard",
     "category": "real",
-    "image": "src/assets/kkmi_web.png",
-    "describe": "KKMI Manuflex Dashboard adalah dashboard berbasis website yang dirancang untuk memonitoring kinerja produksi dan operasional dalam pabrik manufaktur"
+    "image": "/assets/kkmi_web.png",
+    "describe": "KKMI Manuflex Dashboard adalah dashboard berbasis website yang dirancang untuk memonitoring kinerja produksi dan operasional dalam pabrik manufaktur",
+    "tech": [
+      {
+        "name": "Vite"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Tailwind"
+      },
+
+      {
+        "name": "Express JS"
+      },
+      {
+        "name": "PostgreSQL"
+      }
+    ]
   },
   {
     "id": 4,
     "name": "Admin Puri Hotel",
     "category": "real",
-    "image": "src/assets/hotel_web.png",
-    "describe": "Sebuah sistem yang dirancang untuk mengelola kamar, reservasi, dan layanan tamu di hotel "
+    "image": "/assets/hotel_web.png",
+    "describe": "Sebuah sistem yang dirancang untuk mengelola kamar, reservasi, dan layanan tamu di hotel ",
+    "tech": [
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "Laravel"
+      },
+
+      {
+        "name": "PostgreSQL"
+      }
+    ]
   },
   {
     "id": 5,
     "name": "PM Scheduler",
     "category": "real",
-    "image": "src/assets/pmscheduler_web.png",
-    "describe": "Sebuah website yang digunakan oleh Departement Maintenance untuk manajemen jadwal PM lalu memonitoring Andon dan Runtime Mesin serta kondisi mesin"
+    "image": "/assets/pmscheduler_web.png",
+    "describe": "Sebuah website yang digunakan oleh Departement Maintenance untuk manajemen jadwal PM lalu memonitoring Andon dan Runtime Mesin serta kondisi mesin",
+    "tech": [
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "CodeIgniter3"
+      },
+
+      {
+        "name": "MsSQL"
+      }
+    ]
   },
   {
     "id": 6,
     "name": "E-Sparepart",
     "category": "real",
-    "image": "src/assets/esparepart_web.png",
-    "describe": "Sistem yang berisikan catalog sparepart berbagai jenis mesin dan peralatan, sistem ini dirancang untuk mengelola inventaris sparepart "
+    "image": "/assets/esparepart_web.png",
+    "describe": "Sistem yang berisikan catalog sparepart berbagai jenis mesin dan peralatan, sistem ini dirancang untuk mengelola inventaris sparepart ",
+    "tech": [
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "CodeIgniter4"
+      },
+
+      {
+        "name": "MySQL"
+      }
+    ]
   },
   {
     "id": 7,
     "name": "Maintenance Learning Center",
     "category": "real",
-    "image": "src/assets/learning_web.png",
-    "describe": "Maintenance Learning Center adalah sebuah sistem yang berisikan modul, dokumentasi dan langkah panduan teknis mengenai prosedur perawatan dan pemeliharaan mesin "
+    "image": "/assets/learning_web.png",
+    "describe": "Maintenance Learning Center adalah sebuah sistem yang berisikan modul, dokumentasi dan langkah panduan teknis mengenai prosedur perawatan dan pemeliharaan mesin ",
+    "tech": [
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "CodeIgniter4"
+      },
+      {
+        "name": "MySQL"
+      }
+    ]
   },
   {
     "id": 8,
     "name": "Master Checksheet",
     "category": "real",
-    "image": "src/assets/checksheet_web.png",
-    "describe": "Sebuah sistem yang digunakan untuk membuat checksheet secara dinamis, sistem ini memungkinkan user untuk mendesain dan mengatur checksheet sesuai dengan kebutuhan "
+    "image": "/assets/checksheet_web.png",
+    "describe": "Sebuah sistem yang digunakan untuk membuat checksheet secara dinamis, sistem ini memungkinkan user untuk mendesain dan mengatur checksheet sesuai dengan kebutuhan ",
+    "tech": [
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "CodeIgniter3"
+      },
+      {
+        "name": "MsSQL"
+      }
+    ]
   },
   {
     "id": 9,
     "name": "Production Control",
     "category": "real",
-    "image": "src/assets/production_web.png",
-    "describe": "Production Control adalah sebuah sistem yang dirancang untuk memonitoring proses produksi dan pengelolaan tiket Preventive Maintenance (PM)"
+    "image": "/assets/production_web.png",
+    "describe": "Production Control adalah sebuah sistem yang dirancang untuk memonitoring proses produksi dan pengelolaan tiket Preventive Maintenance (PM)",
+    "tech": [
+      {
+        "name": "PHP"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "CodeIgniter3"
+      },
+      {
+        "name": "MySQL"
+      },
+      {
+        "name": "MsSQL"
+      }
+    ]
   },
   {
     "id": 6,
     "name": "Capstone Project - Webeer",
     "category": "dummy",
-    "image": "src/assets/webeer_web.png",
-
-    "describe": "Tugas Akhir MSIB dengan tema solusi ekonomi dengan membangun sebuah sistem berbasis Web App yang berisikan forum diskusi dan lowongan pekerjaan terkhusus bagi web programmer"
+    "image": "/assets/webeer_web.png",
+    "describe": "Tugas Akhir MSIB dengan tema solusi ekonomi dengan membangun sebuah sistem berbasis Web App yang berisikan forum diskusi dan lowongan pekerjaan terkhusus bagi web programmer",
+    "tech": [
+      {
+        "name": "Webpack"
+      },
+      {
+        "name": "Bootstrap"
+      },
+      {
+        "name": "Express JS"
+      },
+      {
+        "name": "PWA"
+      },
+      {
+        "name": "Mongo DB"
+      }
+    ]
   },
   {
     "id": 7,
     "name": "Capstone Project - EyeCare",
     "category": "android",
-    "image": "src/assets/android.jpg",
-    "describe": "Tugas Akhir MSIB dengan tema solusi kesehatan dengan membangun sebuah sistem berbasis mobile yang berisikan catalog kacamata dan mendiagnosis buta warna"
+    "image": "/assets/android.jpg",
+    "describe": "Tugas Akhir MSIB dengan tema solusi kesehatan dengan membangun sebuah sistem berbasis mobile yang berisikan catalog kacamata dan mendiagnosis buta warna",
+    "tech": [
+      {
+        "name": "Kotlin"
+      },
+      {
+        "name": "Jetpack Compose"
+      },
+      {
+        "name": "Express JS"
+      },
+      {
+        "name": "Mongo DB"
+      }
+    ]
   }
 ]

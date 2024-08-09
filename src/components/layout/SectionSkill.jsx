@@ -1,7 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import DataSkill from "../../utils/skill.json";
-import Sphere from "../Sphere";
 const SectionSkill = ({ item, isActive }) => {
   console.log(isActive);
 

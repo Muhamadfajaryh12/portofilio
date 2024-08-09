@@ -2,99 +2,99 @@
   {
     "id": 1,
     "name": "Belajar Dasar Git dan Github",
-    "pdf": "src/assets/files/git_github.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/git_github.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 2,
     "name": "Pengenalan ke Logika Pemrograman",
-    "pdf": "src/assets/files/logika.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/logika.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 3,
     "name": "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-    "pdf": "src/assets/files/pengembang_software.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/pengembang_software.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 4,
     "name": "Belajar Dasar Pemrograman Web",
-    "pdf": "src/assets/files/web_dasar.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/web_dasar.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 5,
     "name": "Belajar Membuat Front end Web untuk Pemula",
-    "pdf": "src/assets/files/fe_pemula.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/fe_pemula.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 6,
     "name": "Belajar Fundamental Front end Web Development",
-    "pdf": "src/assets/files/fe_fundamental.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/fe_fundamental.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 7,
     "name": "Menjadi Front end Web Development Expert",
-    "pdf": "src/assets/files/fe_expert.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/fe_expert.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 8,
     "name": "Belajar Dasar Pemrograman Javascript",
-    "pdf": "src/assets/files/js_pemula.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/js_pemula.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 9,
     "name": "Belajar Membuat Web dengan React",
-    "pdf": "src/assets/files/react_pemula.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/react_pemula.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 10,
     "name": "Belajar Fundamental Aplikasi Web dengan React",
-    "pdf": "src/assets/files/react_fundamental.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/react_fundamental.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 11,
     "name": "Menjadi React Web Developer Expert",
-    "pdf": "src/assets/files/react_expert.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/react_expert.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 12,
     "name": "Menjadi Node.js Application Developer",
-    "pdf": "src/assets/files/node_js.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/node_js.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 13,
     "name": "Belajar Membuat Aplikasi Back-end untuk Pemula",
-    "pdf": "src/assets/files/be_pemula.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/be_pemula.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   },
   {
     "id": 14,
     "name": "Belajar Fundamental Aplikasi Back-end",
-    "pdf": "src/assets/files/be_fundamental.pdf",
-    "image": "src/assets/pdf.png",
+    "pdf": "/assets/be_fundamental.pdf",
+    "image": "/assets/pdf.png",
     "from": "Dicoding Indonesia"
   }
 ]
