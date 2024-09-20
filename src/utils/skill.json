@@ -93,5 +93,14 @@
     "nama": "MongoDB",
     "level": "Intermediate",
     "image": "/assets/MongoDB_logo.webp"
+  },
+  {
+    "nama": "Golang"
+  },
+  {
+    "nama": "Tableau"
+  },
+  {
+    "nama": "PowerBI"
   }
 ]

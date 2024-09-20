@@ -1,21 +1,44 @@
 import React from "react";
 import CV from "../../public/assets/CV.pdf";
 import { FaLinkedin } from "react-icons/fa";
-
-const Banner = ({ isActive }) => {
+import Blob from "../../public/blob.svg";
+const Banner = () => {
   return (
-    <div className="  text-white mt-32 ml-12 w-1/2">
-      <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
-      <h1 style={{ fontWeight: "bold" }}>
-        I'm Muhamad Fajar Yudhistira Herjanto
-      </h1>
-      <h5 style={{ letterSpacing: "10px" }}>Frontend & Backend Developer</h5>
-      <h6 style={{ letterSpacing: "3px", maxWidth: "690px" }}>
-        I am a fresh graduate from the University of Singaperbangsa Karawang
-        informatics study program. I have internship and independent study
-        experience.
-      </h6>
-      <div className="">
+    <div className="p-10">
+      <div className="flex">
+        <div className="">
+          <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
+          <h1 style={{ fontWeight: "bold" }}>
+            I'm Muhamad Fajar Yudhistira Herjanto
+          </h1>
+          <h5 style={{ letterSpacing: "10px" }}>
+            Frontend & Backend Developer
+          </h5>
+          <div className="mt-12 d-flex gap-2">
+            <a
+              className=" bg-blue-600 text-white text-lg font-semibold p-2 rounded-sm  hover:bg-blue-700 "
+              href={CV}
+              download={true}
+              style={{ textDecoration: "none" }}
+            >
+              Visit my Linkedln
+            </a>
+            <a
+              className=" bg-black  font-semibold p-2 rounded-sm text-white shadow-sm text-lg "
+              href={CV}
+              download={true}
+              style={{ textDecoration: "none" }}
+            >
+              Visit my Github
+            </a>
+          </div>
+        </div>
+        <div className="">
+          <img src={Blob} className="w-96" />
+        </div>
+      </div>
+
+      {/* <div className="">
         <ul className="fw-bold mt-10" style={{ letterSpacing: "3px" }}>
           <li
             className={`my-2 text-xl ${
@@ -46,23 +69,7 @@ const Banner = ({ isActive }) => {
             SERTIFIKAT
           </li>
         </ul>
-      </div>
-      <div className="mt-12 d-flex gap-2">
-        <a
-          className=" bg-gray-100 text-dark font-semibold p-2 rounded-sm  hover:bg-gray-300 "
-          href={CV}
-          download={true}
-          style={{ textDecoration: "none" }}
-        >
-          DOWNLOAD CV
-        </a>
-        <a
-          href="www.linkedin.com/in/muhamadfajaryh"
-          className="bg-white p-0 m-0"
-        >
-          <FaLinkedin className="text-white" size={40} />
-        </a>
-      </div>
+      </div> */}
     </div>
   );
 };
