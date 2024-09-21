@@ -1,11 +1,9 @@
-import React from "react";
 import CV from "../../public/assets/CV.pdf";
-import { FaLinkedin } from "react-icons/fa";
-import Blob from "../../public/blob.svg";
+import Blob from "../../public/profile.png";
 const Banner = () => {
   return (
     <div className="p-10">
-      <div className="flex">
+      <div className="flex justify-evenly items-center flex-wrap">
         <div className="">
           <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
           <h1 style={{ fontWeight: "bold" }}>
@@ -13,28 +11,37 @@ const Banner = () => {
           </h1>
           <h5 style={{ letterSpacing: "10px" }}>
             Frontend & Backend Developer
-          </h5>
-          <div className="mt-12 d-flex gap-2">
+          </h5>{" "}
+          <h6 style={{ letterSpacing: "2px" }} className="w-3/4 my-4">
+            Merupakan Fresh Graduate Program Studi Informatika dari Universitas
+            Singaperbangsa Karawang
+          </h6>
+          <div className="my-8 d-flex gap-2">
             <a
-              className=" bg-blue-600 text-white text-lg font-semibold p-2 rounded-sm  hover:bg-blue-700 "
-              href={CV}
-              download={true}
+              className=" bg-blue-600 text-white text-lg font-semibold p-2 rounded-md  hover:bg-blue-700 "
+              href="https://www.linkedin.com/in/muhamadfajaryh"
+              target="_blank"
               style={{ textDecoration: "none" }}
             >
               Visit my Linkedln
             </a>
             <a
-              className=" bg-black  font-semibold p-2 rounded-sm text-white shadow-sm text-lg "
-              href={CV}
-              download={true}
+              className=" bg-black  font-semibold p-2 rounded-md text-white shadow-sm text-lg "
+              href={"https://github.com/Muhamadfajaryh12"}
+              target="_blank"
               style={{ textDecoration: "none" }}
             >
               Visit my Github
             </a>
           </div>
         </div>
-        <div className="">
-          <img src={Blob} className="w-96" />
+
+        <div className="relative m-2">
+          <img src={Blob} className="w-80 p-4" />
+          <div className="absolute top-0 left-0 border-t-8 border-l-8 border-blue-600 w-20 h-20"></div>
+          <div className="absolute top-0 right-0 border-t-8 border-r-8 border-blue-600 w-20 h-20"></div>
+          <div className="absolute bottom-0 right-0 border-b-8 border-r-8 border-blue-600 w-20 h-20"></div>
+          <div className="absolute bottom-0 left-0 border-b-8 border-l-8 border-blue-600 w-20 h-20"></div>
         </div>
       </div>
 

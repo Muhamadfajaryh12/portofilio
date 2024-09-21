@@ -235,7 +235,7 @@
     "id": 7,
     "name": "Capstone Project - EyeCare",
     "category": "android",
-    "image": "/assets/android.jpg",
+    "image": "/assets/android.png",
     "describe": "Tugas Akhir MSIB dengan tema solusi kesehatan dengan membangun sebuah sistem berbasis mobile yang berisikan catalog kacamata dan mendiagnosis buta warna",
     "tech": [
       {

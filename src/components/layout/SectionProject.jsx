@@ -3,43 +3,63 @@ import { useState } from "react";
 import { Card, Col, Row, Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
 import data from "../../utils/project.json";
 
-const SectionProject = ({ item, isActive }) => {
-  console.log(isActive);
+const SectionProject = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const itemsPerSlide = 3;
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex >= data.length - itemsPerSlide ? 0 : prevIndex + itemsPerSlide
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - itemsPerSlide : prevIndex - itemsPerSlide
+    );
+  };
 
   return (
-    <div className={`section ${isActive ? "opacity-100" : "opacity-50"}`}>
-      <h4 className="text-gray-200 fw-bolder" style={{ letterSpacing: "5px" }}>
-        {item}
-      </h4>
-      <ol className="relative border-s border-gray-200 dark:border-gray-700">
-        {data.map((item) => (
-          <li className="mb-8 ms-4" key={item.id}>
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <h3 className="text-lg font-semibold text-white">{item.name} </h3>
-            <div className="d-flex gap-2 ">
+    <div className="bg-blue-600 p-10">
+      <p
+        className="text-gray-200 font-bold text-3xl text-center"
+        style={{ letterSpacing: "2px" }}
+      >
+        Project
+      </p>
+      <div className="flex overflow-hidden w-full relative">
+        <div
+          className="flex transition-transform duration-500 ease-in-out "
+          style={{
+            transform: `translateX(-${(currentIndex / itemsPerSlide) * 100}%)`,
+          }}
+        >
+          {data.map((item, index) => (
+            <div key={index} className="flex-shrink-0 w-1/3 h-72 text-center ">
               <img
                 src={item.image}
-                alt=""
-                className={
-                  item.category == "android" ? "w-32 h-42" : "w-62 h-40"
-                }
+                alt={item.name}
+                className="w-72 h-72 mx-auto  drop-shadow-xl"
               />
-              <div className="">
-                <p className="mb-4 text-base font-normal text-white dark:text-gray-400 w-62 p-2 text-justify">
-                  {item.describe}
-                </p>
-                <div className="d-flex flex-wrap gap-2">
-                  {item.tech?.map((item) => (
-                    <span className="border-1 border-white  text-white font-semibold mx-1 p-1 text-xs">
-                      {item.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
-          </li>
-        ))}
-      </ol>
+          ))}
+        </div>
+      </div>
+      <div className="flex justify-center gap-2 mt-4">
+        <button
+          onClick={prevSlide}
+          className="bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold"
+        >
+          Sebelumnya
+        </button>
+        <button
+          onClick={nextSlide}
+          className="bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold"
+        >
+          Selanjutnya
+        </button>
+      </div>
     </div>
   );
 };

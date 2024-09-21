@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Banner from "./components/Banner";
 // import SectionCertificate from "./components/layout/SectionCertificate";
-// import SectionExperience from "./components/layout/SectionExperience";
-// import SectionProject from "./components/layout/SectionProject";
+import SectionExperience from "./components/layout/SectionExperience";
+import SectionProject from "./components/layout/SectionProject";
 import SectionSkill from "./components/layout/SectionSkill";
 // import * as THREE from "three";
 function App() {
@@ -108,6 +108,8 @@ function App() {
       <div className="">
         <Banner />
         <SectionSkill />
+        <SectionExperience />
+        <SectionProject />
       </div>
       {/* <div className=" w-screen h-screen d-flex relative z-10">
         <Banner isActive={activeSection} />
