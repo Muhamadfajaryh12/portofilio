@@ -23,7 +23,7 @@ const Banner = () => {
               target="_blank"
               style={{ textDecoration: "none" }}
             >
-              Visit my Linkedln
+              Linkedln
             </a>
             <a
               className=" bg-black  font-semibold p-2 rounded-md text-white shadow-sm text-lg "
@@ -31,7 +31,7 @@ const Banner = () => {
               target="_blank"
               style={{ textDecoration: "none" }}
             >
-              Visit my Github
+              Github
             </a>
           </div>
         </div>

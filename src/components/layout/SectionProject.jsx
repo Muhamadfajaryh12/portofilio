@@ -18,8 +18,9 @@ const SectionProject = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? data.length - itemsPerSlide : prevIndex - itemsPerSlide
     );
+    console.log(currentIndex == 0);
   };
-
+  console.log(currentIndex);
   return (
     <div className="bg-blue-600 p-10">
       <p
@@ -36,11 +37,14 @@ const SectionProject = () => {
           }}
         >
           {data.map((item, index) => (
-            <div key={index} className="flex-shrink-0 w-1/3 h-72 text-center ">
+            <div
+              key={index}
+              className="flex-shrink-0 w-1/3 sm:h-72 text-center "
+            >
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-72 h-72 mx-auto  drop-shadow-xl"
+                className="w-24 h-24 md:w-72 md:h-72 mx-auto  drop-shadow-xl"
               />
             </div>
           ))}
@@ -49,13 +53,16 @@ const SectionProject = () => {
       <div className="flex justify-center gap-2 mt-4">
         <button
           onClick={prevSlide}
-          className="bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold"
+          className={`bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold `}
+          disabled={currentIndex <= 0}
+          type="button"
         >
           Sebelumnya
         </button>
         <button
           onClick={nextSlide}
-          className="bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold"
+          className={`bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold`}
+          disabled={currentIndex >= data.length - itemsPerSlide}
         >
           Selanjutnya
         </button>
