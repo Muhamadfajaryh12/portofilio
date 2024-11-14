@@ -1,21 +1,39 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Nav className="justify-content-end flex-grow-1">
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#experience">Experience</Nav.Link>
-            <Nav.Link href="#project">Project</Nav.Link>
-            <Nav.Link href="#certificate">Certificate</Nav.Link>
-            <Nav.Link href="#contact">Contact </Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+      <div className="w-full border-b-1 border-gray-50 p-4 flex justify-between items-center absolute z-2">
+        <h5 className="text-blue-500 font-bold">
+          Muhamad Fajar Yudhistira Herjanto.
+        </h5>
+        <ul className="flex gap-4 mr-4 ">
+          <li>
+            <Link
+              to="/"
+              className="text-white opacity-70 text-decoration-none text-lg"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="text-white opacity-70 text-decoration-none text-lg"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/project"
+              className="text-white opacity-70 text-decoration-none text-lg"
+            >
+              Project
+            </Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

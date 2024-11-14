@@ -1,19 +1,29 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-const Card = () => {
+import Aos from "aos";
+import React, { useEffect } from "react";
+
+const Card = ({ name, image, tech, category }) => {
+  console.log(name);
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <div
+      data-aos="zoom-in"
+      className="h-full  my-2 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-sm p-3 relative  hover:-translate-y-10 duration-500"
+    >
+      <img src={image} alt="" className="rounded-md" />
+      <h6 className="font-bold text-white text-2xl mx-1 mt-3">{name}</h6>
+      <div className="text-white font-bold opacity-50 mx-1 my-2 text-lg">
+        {category}
+      </div>
+      <div className="flex flex-wrap justify-start">
+        {tech.map((item) => (
+          <div className="text-blue-500 border-blue-500 border-1 text-xs font-bold rounded-md p-1 m-1">
+            #{item.name}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

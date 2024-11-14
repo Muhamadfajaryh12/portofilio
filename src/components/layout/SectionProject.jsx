@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Card, Col, Row, Nav, OverlayTrigger, Tooltip } from "react-bootstrap";
+import Card from "../Card";
 import data from "../../utils/project.json";
 
 const SectionProject = () => {
@@ -22,14 +22,14 @@ const SectionProject = () => {
   };
   console.log(currentIndex);
   return (
-    <div className="bg-blue-600 p-10">
+    <div className="p-10 ">
       <p
-        className="text-gray-200 font-bold text-3xl text-center"
+        className="text-gray-200 mt-10 font-bold text-3xl text-center"
         style={{ letterSpacing: "2px" }}
       >
         Project
       </p>
-      <div className="flex overflow-hidden w-full relative">
+      {/* <div className="flex overflow-hidden w-full relative">
         <div
           className="flex transition-transform duration-500 ease-in-out "
           style={{
@@ -49,6 +49,17 @@ const SectionProject = () => {
             </div>
           ))}
         </div>
+      </div> */}
+      <div className="grid md:grid-cols-2 gap-5 sm:grid-cols-1 xl:grid-cols-3 lg:mx-24 ">
+        {data.map((item, index) => (
+          <Card
+            key={index}
+            name={item.name}
+            image={item.image}
+            tech={item.tech}
+            category={item.category}
+          />
+        ))}
       </div>
       <div className="flex justify-center gap-2 mt-4">
         <button
