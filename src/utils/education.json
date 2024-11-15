@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nama": "Universitas Singaperbangsa Karawang",
+    "tahun": "2020 - 2024",
+    "jurusan": "Informatika",
+    "nilai": "GPA 3,94"
+  },
+  {
+    "id": 2,
+    "nama": "SMA Negeri 4 Karawang",
+    "tahun": "2017 - 2020",
+    "jurusan": "Minat Ilmu Pengetahuan Alam",
+    "nilai": ""
+  }
+]

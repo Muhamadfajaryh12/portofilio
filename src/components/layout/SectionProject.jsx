@@ -22,13 +22,13 @@ const SectionProject = () => {
   };
   console.log(currentIndex);
   return (
-    <div className="p-10 ">
-      <p
-        className="text-gray-200 mt-10 font-bold text-3xl text-center"
-        style={{ letterSpacing: "2px" }}
+    <div className="p-10">
+      <h5
+        className="font-bold text-6xl text-gray-500  text-center mt-20"
+        data-aos="zoom-in"
       >
-        Project
-      </p>
+        Project.
+      </h5>
       {/* <div className="flex overflow-hidden w-full relative">
         <div
           className="flex transition-transform duration-500 ease-in-out "
@@ -50,7 +50,7 @@ const SectionProject = () => {
           ))}
         </div>
       </div> */}
-      <div className="grid md:grid-cols-2 gap-5 sm:grid-cols-1 xl:grid-cols-3 lg:mx-24 ">
+      <div className="grid md:grid-cols-2 gap-5 sm:grid-cols-1 xl:grid-cols-3 lg:mx-24  my-20">
         {data.map((item, index) => (
           <Card
             key={index}
@@ -61,7 +61,7 @@ const SectionProject = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center gap-2 mt-4">
+      {/* <div className="flex justify-center gap-2 mt-4">
         <button
           onClick={prevSlide}
           className={`bg-blue-700 text-white shadow-md hover:bg-blue-800 p-2 rounded-md font-semibold `}
@@ -77,7 +77,7 @@ const SectionProject = () => {
         >
           Selanjutnya
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -9,10 +9,11 @@ const Banner = () => {
   }, []);
   return (
     <div
-      className="p-10 flex h-screen justify-evenly items-center flex-wrap text-white"
+      className="p-10 flex xl:h-screen justify-evenly items-center flex-wrap text-white"
       data-aos="zoom-in"
+      style={{ backgroundColor: "#181823" }}
     >
-      <div className="">
+      <div className="mt-20">
         <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
         <h1 style={{ fontWeight: "bold" }}>
           I'm Muhamad Fajar Yudhistira Herjanto

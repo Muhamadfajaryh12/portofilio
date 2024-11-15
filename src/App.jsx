@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import NavBar from "./components/Navbar";
 import { Route, Router, Routes } from "react-router-dom";
 import SectionProject from "./components/layout/SectionProject";
+import AboutPage from "./pages/AboutPage";
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Banner />} />{" "}
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/project" element={<SectionProject />} />
         </Routes>
       </div>

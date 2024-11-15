@@ -1,55 +1,65 @@
-import React from "react";
+import { useEffect } from "react";
 import ExperienceData from "../../utils/experience.json";
+import ProjectData from "../../utils/education.json";
+import Aos from "aos";
 
 const SectionExperience = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="flex justify-evenly my-4 items-center flex-wrap">
-      <div className="text-center w-96">
-        <p className=" fw-bolder text-4xl" style={{ letterSpacing: "2px" }}>
-          Pengalaman
-        </p>
-        <p className=" fw-bolder text-lg">
-          Pengalaman yang telah saya dapatkan sampai saat ini
-        </p>
+    <div className="mt-24">
+      <h5
+        className="font-bold text-6xl text-gray-500  text-center"
+        data-aos="zoom-in"
+      >
+        Education.
+      </h5>
+      <div className="p-2 flex justify-center">
+        <ol
+          className="relative border-e border-gray-200  w-3/4  p-0"
+          data-aos="zoom-in"
+        >
+          {ProjectData.map((item, index) => (
+            <li
+              className="my-3 mr-5 sm:mr-20 text-gray-300 text-end "
+              key={index}
+              data-aos="zoom-in"
+            >
+              <h6 className=" text-lg m-0 p-0">{item.nama}</h6>
+              <span>
+                {item.jurusan} | {item.tahun}
+              </span>
+              <h6>{item.nilai}</h6>
+            </li>
+          ))}
+        </ol>
       </div>
-      <div className="p-2">
-        {ExperienceData.map((item, index) => (
-          <div
-            className={`relative flex items-center rounded-md my-3 shadow-md ${
-              index % 2 == 0 ? `bg-blue-600 text-white` : `bg-gray-50`
-            }`}
-            key={item.name}
-          >
-            <div
-              className={`w-5 h-5 absolute -left-10 transform -translate-x-2/4 rounded-full z-10  md:mt-0 shadow-sm ${
-                index % 2 == 0 ? `bg-gray-200` : `bg-blue-600`
-              }`}
-            ></div>
-            <div className="w-10 h-1 bg-blue-300 absolute -left-10 z-0"></div>
-            <div className="flex-auto p-2">
-              <h1 className="text-sm ">{item.date}</h1>
-              <h1 className="text-sm font-bold ">{item.name}</h1>
-              <h3 className="text-sm  font-semibold">{item.level}</h3>
-            </div>
-          </div>
-        ))}
+      <h5
+        className="font-bold text-6xl text-gray-500 text-center mt-10"
+        data-aos="zoom-in"
+      >
+        Experience.
+      </h5>
+      <div className="p-2 flex justify-center ">
+        <ol
+          className="relative border-s border-gray-200 w-3/4 p-0"
+          data-aos="zoom-in"
+        >
+          {ExperienceData.map((item, index) => (
+            <li
+              className="my-3 ml-5 sm:ml-20 text-gray-300"
+              key={index}
+              data-aos="zoom-in"
+            >
+              <h6 className=" text-lg m-0 p-0">{item.name}</h6>
+              <span>
+                {item.level} | {item.date}
+              </span>
+            </li>
+          ))}
+        </ol>
       </div>
-      {/* <ol className="relative border-s border-gray-200 dark:border-gray-700">
-        {ExperienceData.map((item) => (
-          <li className="mb-4 ms-4" key={item.name}>
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <time className=" text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              {item.date}
-            </time>
-            <h3 className="m-0 text-lg font-semibold text-white">
-              {item.name}
-            </h3>
-            <p className="m-0 text-base font-normal text-gray-500 dark:text-gray-400">
-              {item.level}
-            </p>
-          </li>
-        ))}
-      </ol> */}
     </div>
   );
 };
