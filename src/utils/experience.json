@@ -19,7 +19,8 @@
       {
         "list": "Membangun dan mengintegrasikan fitur Ticket PM dan Master Mesin dalam website Production Control untuk mengoptimalkan proses kontrol produksi dan manajemen pemeliharaan."
       }
-    ]
+    ],
+    "image": "/assets/e_checklist_web.png"
   },
   {
     "name": "Bangkit Android Development - Magang Studi Independet Bersertifikat",
@@ -41,7 +42,8 @@
       {
         "list": "Melakukan digitalisasi checksheet Revisi Sparepart dan Pembuatan Number Sparepart mempercepat dan menyederhanakan alur kerja."
       }
-    ]
+    ],
+    "image": "/assets/e_checklist_web.png"
   },
   {
     "name": "Web Developer - CV Karib IT Solution",
@@ -63,7 +65,8 @@
       {
         "list": "Melakukan digitalisasi checksheet Revisi Sparepart dan Pembuatan Number Sparepart mempercepat dan menyederhanakan alur kerja."
       }
-    ]
+    ],
+    "image": "/assets/e_checklist_web.png"
   },
   {
     "name": "Pemenang Kompetisi Software Developer - Kompetisi Semantik 7.0",
@@ -85,7 +88,8 @@
       {
         "list": "Melakukan digitalisasi checksheet Revisi Sparepart dan Pembuatan Number Sparepart mempercepat dan menyederhanakan alur kerja."
       }
-    ]
+    ],
+    "image": "/assets/e_checklist_web.png"
   },
   {
     "name": "Pengembang Frontend dan Backend Web - Magang Studi Independet Bersertifikat",
@@ -107,6 +111,7 @@
       {
         "list": "Melakukan digitalisasi checksheet Revisi Sparepart dan Pembuatan Number Sparepart mempercepat dan menyederhanakan alur kerja."
       }
-    ]
+    ],
+    "image": "/assets/e_checklist_web.png"
   }
 ]

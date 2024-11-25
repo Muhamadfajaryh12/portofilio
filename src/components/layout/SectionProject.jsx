@@ -4,27 +4,23 @@ import Card from "../Card";
 import data from "../../utils/project.json";
 
 const SectionProject = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const itemsPerSlide = 3;
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex >= data.length - itemsPerSlide ? 0 : prevIndex + itemsPerSlide
-    );
+  const [datas, setDatas] = useState([]);
+  useEffect(() => {
+    setDatas(data.slice(0, 6));
+  }, []);
+  const handleViewMore = () => {
+    setDatas(data.slice(0, datas.length + 3));
+  };
+  const handleViewLess = () => {
+    if (datas.length > 7) {
+      setDatas(data.slice(0, datas.length - 3));
+    }
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - itemsPerSlide : prevIndex - itemsPerSlide
-    );
-    console.log(currentIndex == 0);
-  };
-  console.log(currentIndex);
   return (
     <div className="p-10">
       <h5
-        className="font-bold text-6xl text-gray-500  text-center mt-20"
+        className="font-bold text-6xl text-cyan-500  text-center mt-20"
         data-aos="zoom-in"
       >
         Project.
@@ -51,7 +47,7 @@ const SectionProject = () => {
         </div>
       </div> */}
       <div className="grid md:grid-cols-2 gap-5 sm:grid-cols-1 xl:grid-cols-3 lg:mx-24  my-20">
-        {data.map((item, index) => (
+        {datas.map((item, index) => (
           <Card
             key={index}
             name={item.name}
@@ -78,6 +74,21 @@ const SectionProject = () => {
           Selanjutnya
         </button>
       </div> */}
+      <div className="flex justify-center gap-5 flex-wrap">
+        <button
+          className=" border-2 text-xl font-semibold border-cyan-400 p-3 w-52 text-cyan-400 hover:border-cyan-600 hover:text-cyan-600"
+          onClick={handleViewLess}
+        >
+          View Less
+        </button>
+
+        <button
+          className=" border-2 text-xl font-semibold border-cyan-400 p-3 w-52 text-cyan-400 hover:border-cyan-600 hover:text-cyan-600"
+          onClick={handleViewMore}
+        >
+          View More
+        </button>
+      </div>
     </div>
   );
 };
