@@ -8,11 +8,11 @@ const Banner = () => {
     AOS.init();
   }, []);
   return (
-    <div
-      className="p-10 flex xl:h-screen justify-evenly items-center flex-wrap text-white"
-      data-aos="zoom-in"
-      style={{ backgroundColor: "#181823" }}
-    >
+    <div className="p-10 flex flex-wrap  xl:h-screen justify-evenly items-center ">
+      {/* <div className="w-96 h-96 relative bg-red-200 group">
+        <div className=" absolute -z-0 w-0 h-full bg-red-500 group-hover:w-full transition-all duration-500 ease-in-out"></div>
+        <img src={Blob} className="w-80 p-4 z-99 relative" alt="" />
+      </div> */}
       <div className="mt-20">
         <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
         <h1 style={{ fontWeight: "bold" }}>
@@ -38,7 +38,7 @@ const Banner = () => {
             Linkedln
           </a>
           <a
-            className=" border-gray-600 border-2 font-semibold p-2 rounded-md text-white shadow-sm text-lg w-36 text-center "
+            className=" border-gray-600 border-2 font-semibold p-2 rounded-md text-black shadow-sm text-lg w-36 text-center "
             href={"https://github.com/Muhamadfajaryh12"}
             target="_blank"
             style={{ textDecoration: "none" }}

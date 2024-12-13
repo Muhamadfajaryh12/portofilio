@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Untuk Webkit (Chrome, Safari, Edge) */
+}
+
+/* Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none; /* Menyembunyikan scrollbar di Firefox */
+}

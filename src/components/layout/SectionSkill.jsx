@@ -16,10 +16,10 @@ const SectionSkill = () => {
       <div className="flex flex-wrap justify-center w-3/4 mx-auto my-5">
         {DataSkill.map((item, index) => (
           <div key={index} data-aos="zoom-in">
-            <div className=" w-24 m-2 border-2 border-blue-600 rounded-md shadow-xl text-white text-center font-bold p-2 ">
+            <div className=" w-32 m-2 rounded-md shadow-md text-white text-center font-bold p-3 ">
               <small
                 style={{ fontWeight: "500" }}
-                className="opacity-70 text-sm"
+                className="text-gray-500 text-lg"
               >
                 {item.nama}
               </small>

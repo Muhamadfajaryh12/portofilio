@@ -5,16 +5,16 @@ const NavBar = () => {
   console.log(nav.pathname);
   return (
     <>
-      <div className="w-full border-b-1 border-gray-50 p-4 flex justify-center sm:justify-between items-center absolute z-2">
-        <h5 className="text-blue-500 font-bold hidden sm:block">
+      <div className="w-full border-b-1 border-gray-50 p-4 flex justify-center sm:justify-between items-center absolute z-2 text-black">
+        <h5 className=" font-bold hidden sm:block">
           Muhamad Fajar Yudhistira Herjanto.
         </h5>
         <ul className="flex gap-4 mr-4 ">
           <li>
             <Link
               to="/"
-              className={`text-white text-decoration-none text-lg ${
-                nav.pathname == "/" ? `opacity-100 font-bold` : `opacity-70`
+              className={` text-decoration-none  text-black text-lg ${
+                nav.pathname == "/" ? `opacity-100 font-bold ` : `opacity-70 `
               }`}
             >
               Home
@@ -23,10 +23,10 @@ const NavBar = () => {
           <li>
             <Link
               to="/about"
-              className={`text-white text-decoration-none text-lg ${
+              className={` text-decoration-none  text-black text-lg ${
                 nav.pathname == "/about"
-                  ? `opacity-100 font-bold`
-                  : `opacity-70`
+                  ? `opacity-100 font-bold `
+                  : `opacity-70 `
               }`}
             >
               About
@@ -35,10 +35,10 @@ const NavBar = () => {
           <li>
             <Link
               to="/project"
-              className={`text-white text-decoration-none text-lg ${
+              className={` text-decoration-none  text-black text-lg ${
                 nav.pathname == "/project"
-                  ? `opacity-100 font-bold`
-                  : `opacity-70`
+                  ? `opacity-100 font-bold `
+                  : `opacity-70 `
               }`}
             >
               Project

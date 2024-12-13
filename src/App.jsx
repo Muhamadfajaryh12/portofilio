@@ -8,7 +8,7 @@ import AboutPage from "./pages/AboutPage";
 function App() {
   return (
     <>
-      <div className=" " style={{ backgroundColor: "#181823" }}>
+      <div className="bg-gray-50">
         <NavBar />
         <Routes>
           <Route path="/" element={<Banner />} />{" "}

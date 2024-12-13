@@ -1,12 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import ExperienceData from "../../utils/experience.json";
 import ProjectData from "../../utils/education.json";
 import Aos from "aos";
-import ProgressBar from "./ProgressBar";
 
 const SectionExperience = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const sectionRef = useRef([]);
+  const handleVisibilityChange = (entries) => {
+    console.log(sectionRef, "section");
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        console.log(entry.isIntersecting, index);
+        setActiveIndex(index);
+      }
+    });
+  };
   useEffect(() => {
     Aos.init();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleVisibilityChange, {
+      threshold: 0.1,
+    });
+
+    sectionRef.current.forEach((el) => {
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    return () => {
+      sectionRef.current.forEach((el) => {
+        if (el) {
+          observer.unobserve(el);
+        }
+      });
+    };
   }, []);
 
   return (
@@ -15,17 +45,62 @@ const SectionExperience = () => {
         className="font-bold text-6xl text-gray-500  text-center"
         data-aos="zoom-in"
       >
-        Education.
+        Experience.
       </h5>
-
-      <div className="flex flex-col justify-center items-center relative my-10">
+      <div className="w-full sm:w-1/2 rounded-md  mx-auto">
+        {ExperienceData.map((item, index) => (
+          <div
+            data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}
+            key={index}
+            className={` group w-full h-96 relative my-5 ${
+              index % 2 == 0 ? "sm:-left-20" : "sm:-right-20"
+            }`}
+          >
+            <h1
+              className={`absolute  top-0 text-white text-8xl font-bold z-30 ${
+                index % 2 == 0 ? "left-2" : "right-2"
+              }`}
+            >
+              0{index + 1}
+            </h1>
+            {/* <div className="bg-blue-900 w-full h-0 absolute group-hover:h-full z-20 transition-all ease-in-out duration-700 rounded-md">
+              <div className="hidden group-hover:flex justify-center items-center h-full ">
+                <button className="bg">Dev</button>
+              </div>
+            </div> */}
+            <div className="absolute w-full bottom-0 text-white z-30 opacity-100">
+              <div className="bottom-0 absolute left-5">
+                <h6 className="font-bold text-xl">{item.name}</h6>
+                <h6 className="font-bold text-xl">{item.date}</h6>
+              </div>
+            </div>
+            <div className="bg-black w-full opacity-20 absolute rounded-md h-full z-20 "></div>
+            <img
+              src={`${item.image}`}
+              alt=""
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        ))}
+      </div>
+      {/* <div className="flex flex-col justify-center items-center relative my-10">
         <div className="border-2 border-dashed border-cyan-400 absolute h-full"></div>
         {ExperienceData.map((item, index) =>
           index % 2 == 0 ? (
-            <div className="flex text-white  " key={index}>
+            <div
+              className="flex text-white  "
+              key={index}
+              ref={(el) => (sectionRef.current[index] = el)}
+            >
               <div className="w-1/2">
                 <div className="mr-10 text-justify">
-                  <h2 className="text-2xl text-end">{item.name}</h2>
+                  <h2
+                    className={`text-2xl text-end ${
+                      activeIndex === index ? "text-yellow-400" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </h2>
                   <h6 className="text-end">{item.date}</h6>
                   <p className="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -50,12 +125,19 @@ const SectionExperience = () => {
             </div>
           ) : (
             <div
-              className="flex text-white my-10 flex-row-reverse "
+              className="flex text-white my-96 flex-row-reverse "
               key={index}
+              ref={(el) => (sectionRef.current[index] = el)}
             >
               <div className="w-1/2">
                 <div className="ml-10 text-justify">
-                  <h2 className="text-2xl">{item.name}</h2>
+                  <h2
+                    className={`text-2xl text-end ${
+                      activeIndex === index ? "text-yellow-400" : ""
+                    }`} // Highlight active index
+                  >
+                    {item.name}
+                  </h2>
                   <h6>{item.date}</h6>
                   <p className="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -80,53 +162,7 @@ const SectionExperience = () => {
             </div>
           )
         )}
-      </div>
-      <ProgressBar />
-      <div className="p-2 flex justify-center">
-        <ol
-          className="relative border-e border-gray-200  w-3/4  p-0"
-          data-aos="zoom-in"
-        >
-          {ProjectData.map((item, index) => (
-            <li
-              className="my-3 mr-5 sm:mr-20 text-gray-300 text-end "
-              key={index}
-              data-aos="zoom-in"
-            >
-              <h6 className=" text-lg m-0 p-0">{item.nama}</h6>
-              <span>
-                {item.jurusan} | {item.tahun}
-              </span>
-              <h6>{item.nilai}</h6>
-            </li>
-          ))}
-        </ol>
-      </div>
-      <h5
-        className="font-bold text-6xl text-gray-500 text-center mt-10"
-        data-aos="zoom-in"
-      >
-        Experience.
-      </h5>
-      <div className="p-2 flex justify-center ">
-        <ol
-          className="relative border-s border-gray-200 w-3/4 p-0"
-          data-aos="zoom-in"
-        >
-          {ExperienceData.map((item, index) => (
-            <li
-              className="my-3 ml-5 sm:ml-20 text-gray-300"
-              key={index}
-              data-aos="zoom-in"
-            >
-              <h6 className=" text-lg m-0 p-0">{item.name}</h6>
-              <span>
-                {item.level} | {item.date}
-              </span>
-            </li>
-          ))}
-        </ol>
-      </div>
+      </div> */}
     </div>
   );
 };
