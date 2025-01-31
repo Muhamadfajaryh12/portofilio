@@ -8,52 +8,31 @@ const Banner = () => {
     AOS.init();
   }, []);
   return (
-    <div className="p-10 flex flex-wrap  xl:h-screen justify-evenly items-center ">
+    <div className="p-10 flex flex-wrap text-white text-center  xl:h-screen justify-evenly items-center ">
       {/* <div className="w-96 h-96 relative bg-red-200 group">
         <div className=" absolute -z-0 w-0 h-full bg-red-500 group-hover:w-full transition-all duration-500 ease-in-out"></div>
         <img src={Blob} className="w-80 p-4 z-99 relative" alt="" />
       </div> */}
       <div className="mt-20">
-        <h6 style={{ letterSpacing: "3px" }}>Hello!</h6>
-        <h1 style={{ fontWeight: "bold" }}>
-          I'm Muhamad Fajar Yudhistira Herjanto
+        <h1 style={{ fontWeight: "bold" }} className="text-6xl">
+          Muhamad Fajar Yudhistira Herjanto
         </h1>
-        <h5
-          style={{ letterSpacing: "6px" }}
-          className="font-bold text-4xl opacity-50"
-        >
+        <h5 style={{ letterSpacing: "6px" }} className="font-bold text-5xl">
           Frontend & Backend Developer
-        </h5>{" "}
-        <h6 style={{ letterSpacing: "2px" }} className="w-3/4 my-4">
-          Merupakan Fresh Graduate Program Studi Informatika dari Universitas
-          Singaperbangsa Karawang
-        </h6>
-        <div className="my-8 d-flex gap-2">
-          <a
-            className=" border-blue-600 border-2  text-blue-600 text-lg font-semibold p-2 rounded-md  hover:border-blue-700 w-36 text-center "
-            href="https://www.linkedin.com/in/muhamadfajaryh"
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            Linkedln
-          </a>
-          <a
-            className=" border-gray-600 border-2 font-semibold p-2 rounded-md text-black shadow-sm text-lg w-36 text-center "
-            href={"https://github.com/Muhamadfajaryh12"}
-            target="_blank"
-            style={{ textDecoration: "none" }}
-          >
-            Github
-          </a>
+        </h5>
+        <div className="my-8 flex justify-center">
+          <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  text-white text-lg font-semibold p-2 rounded-md   w-36 text-center ">
+            Get Started
+          </div>
         </div>
       </div>
-      <div className="relative m-2">
+      {/* <div className="relative m-2">
         <img src={Blob} className="w-80 p-4" alt="" />
         <div className="absolute top-0 left-0 border-t-8 border-l-8 border-blue-600 w-20 h-20"></div>
         <div className="absolute top-0 right-0 border-t-8 border-r-8 border-blue-600 w-20 h-20"></div>
         <div className="absolute bottom-0 right-0 border-b-8 border-r-8 border-blue-600 w-20 h-20"></div>
         <div className="absolute bottom-0 left-0 border-b-8 border-l-8 border-blue-600 w-20 h-20"></div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -5,9 +5,9 @@ const BannerEducation = () => {
     Aos.init();
   }, []);
   return (
-    <div className="w-1/2 mx-auto mt-24">
+    <div className="w-full sm:w-1/2 mx-auto mt-24">
       <h5
-        className="font-bold text-6xl text-gray-500  text-center"
+        className="font-bold text-xl md:text-6xl text-gray-500  text-center"
         data-aos="zoom-in"
       >
         Education.

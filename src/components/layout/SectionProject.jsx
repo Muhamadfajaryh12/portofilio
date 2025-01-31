@@ -21,7 +21,7 @@ const SectionProject = () => {
   return (
     <div className="p-10 ">
       <h5
-        className="font-bold text-6xl text-gray-500 mt-24  text-center"
+        className="font-bold text-xl  text-gray-500 mt-24  text-center"
         data-aos="zoom-in"
       >
         Project.
@@ -34,6 +34,7 @@ const SectionProject = () => {
             image={item.image}
             tech={item.tech}
             category={item.category}
+            link={item?.link}
           />
         ))}
       </div>

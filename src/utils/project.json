@@ -117,7 +117,8 @@
       {
         "name": "MsSQL"
       }
-    ]
+    ],
+    "link": "https://portal2.incoe.astra.co.id/pmscheduler-new/"
   },
   {
     "id": 6,
@@ -139,7 +140,8 @@
       {
         "name": "MySQL"
       }
-    ]
+    ],
+    "link": "https://portal3.incoe.astra.co.id/espareparts/public/login"
   },
   {
     "id": 7,
@@ -160,7 +162,8 @@
       {
         "name": "MySQL"
       }
-    ]
+    ],
+    "link": "https://portal3.incoe.astra.co.id/maintenance-learning-center/public/login"
   },
   {
     "id": 8,
@@ -205,7 +208,8 @@
       {
         "name": "MsSQL"
       }
-    ]
+    ],
+    "link": "https://portal2.incoe.astra.co.id/production_control/maintenance/pm_maintenance"
   },
   {
     "id": 6,
@@ -229,27 +233,7 @@
       {
         "name": "Mongo DB"
       }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Capstone Project - EyeCare",
-    "category": "Kampus Merdeka Project",
-    "image": "/assets/android.png",
-    "describe": "Tugas Akhir MSIB dengan tema solusi kesehatan dengan membangun sebuah sistem berbasis mobile yang berisikan catalog kacamata dan mendiagnosis buta warna",
-    "tech": [
-      {
-        "name": "Kotlin"
-      },
-      {
-        "name": "Jetpack Compose"
-      },
-      {
-        "name": "Express JS"
-      },
-      {
-        "name": "Mongo DB"
-      }
-    ]
+    ],
+    "link": "https://webeer.netlify.app/"
   }
 ]

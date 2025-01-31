@@ -1,6 +1,7 @@
 [
   {
-    "name": "Web Developer - PT Century Batteries Indonesia",
+    "name": "Web Developer",
+    "company": " PT Century Batteries Indonesia",
     "level": "Magang",
     "date": "Febuari - Juli 2024",
     "activity": [
@@ -23,7 +24,8 @@
     "image": "https://portalkerja.com/wp-content/uploads/2024/08/PT-Century-Batteries-Indonesia.webp"
   },
   {
-    "name": "Bangkit Android Development - Magang Studi Independent Bersertifikat",
+    "name": "Bangkit Android Development",
+    "company": "Magang Studi Independent Bersertifikat",
     "level": "Studi Independen",
     "date": "Agustus 2023 - January 2024",
     "activity": [
@@ -46,7 +48,8 @@
     "image": "https://i.ytimg.com/vi/AUsORQGNL2I/maxresdefault.jpg"
   },
   {
-    "name": "Web Developer - CV Karib IT Solution",
+    "name": "Web Developer",
+    "company": "CV Karib IT Solution",
     "level": "Magang",
     "date": "Agustus - Oktober 2023",
     "activity": [
@@ -69,7 +72,8 @@
     "image": "https://tse4.mm.bing.net/th?id=OIP._r5yS77nMDyLNmHbXAfotwHaCO&pid=Api&P=0&h=180"
   },
   {
-    "name": "Pemenang Kompetisi Software Developer - Kompetisi Semantik 7.0",
+    "name": "Pemenang Kompetisi Software Developer",
+    "company": "Kompetisi Semantik 7.0",
     "level": "Kompetisi",
     "date": "April 2023",
     "activity": [
@@ -92,7 +96,8 @@
     "image": "/assets/semantik.jpeg"
   },
   {
-    "name": "Pengembang Frontend dan Backend Web - Magang Studi Independent Bersertifikat",
+    "name": "Pengembang Frontend dan Backend Web",
+    "company": "Magang Studi Independent Bersertifikat",
     "level": "Studi Independen",
     "date": "Agustus 2022 - January 2023",
     "activity": [

@@ -1,40 +1,15 @@
-import React, { useState } from "react";
-import Wallpaper from "../../assets/wallpaper.webp";
-import ShortcutJSON from "../../utils/shortcut.json";
+import CardProfile from "../CardProfile";
+import Sidebar from "../Sidebar";
 
-const MainLayout = (props) => {
-  const { setModalShow, handleShortcut, handleContent, uniqueID, setUniqueID } =
-    props;
-  const openModal = (data) => {
-    setModalShow({ ...data, uniqueId: uniqueID + 1, title: data.nama });
-    handleShortcut({ ...data, uniqueId: uniqueID + 1 });
-    handleContent(data.nama);
-    setUniqueID(uniqueID + 1);
-  };
+const MainLayout = ({ children }) => {
   return (
-    <div>
-      <div className="d-flex flex-column p-2">
-        {ShortcutJSON.map((item) => (
-          <div className="" key={item.id}>
-            <button
-              className="bg-transparent border-0"
-              style={{ width: "150px" }}
-              onClick={() => openModal(item)}
-            >
-              <img
-                src={item.image}
-                alt=""
-                style={{ width: "60px ", height: "60px" }}
-              />
-              <p
-                className="text-white text-center mt-2"
-                style={{ fontSize: "12px" }}
-              >
-                {item.nama}
-              </p>
-            </button>
-          </div>
-        ))}
+    <div className="flex justify-center flex-wrap sm:flex-nowrap  gap-2 mt-10">
+      <CardProfile />
+      <div className="flex flex-col-reverse xl:flex-row gap-2  flex-wrap ">
+        <div className="min-w-xl max-w-2xl  bg-white rounded-md p-4 shadow-md">
+          {children}
+        </div>
+        <Sidebar />
       </div>
     </div>
   );
