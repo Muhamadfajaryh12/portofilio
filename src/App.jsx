@@ -5,13 +5,14 @@ import AboutPage from "./pages/AboutPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import ProjectPage from "./pages/ProjectPage";
 import CertificatePage from "./pages/CertificatePage";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <>
-      <div className="bg-gray-100  w-screen min-h-screen p-20 font-mono ">
+      <div className="bg-gray-100  w-screen min-h-screen  font-mono ">
         <Routes>
-          <Route path="/" element={<AboutPage />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/project" element={<ProjectPage />} />
           <Route path="/certificate" element={<CertificatePage />} />

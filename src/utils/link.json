@@ -1,0 +1,14 @@
+[
+  {
+    "link": "/",
+    "title": "Dashboard"
+  },
+  {
+    "link": "/project",
+    "title": "Project"
+  },
+  {
+    "link": "/certificate",
+    "title": "Sertifikat"
+  }
+]
