@@ -6,12 +6,19 @@ const Sidebar = () => {
   const nav = useLocation();
 
   return (
-    <div className="w-1/4 w-full bg-white h-screen rounded-md">
+    <div className="w-1/4  bg-white h-screen rounded-md">
       <CardProfile />
-      <ul>
+      <ul className="p-0 mx-5">
         {dataLink.map((item) => (
-          <li key={item.title} className="text-decoration-none">
-            <Link to={item.link}>{item.title}</Link>
+          <li
+            key={item.title}
+            className={` p-2 rounded-md ${
+              nav.pathname == item.link ? "bg-gray-200 font-bold" : ""
+            }`}
+          >
+            <Link to={item.link} className=" text-decoration-none">
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>

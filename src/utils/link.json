@@ -4,6 +4,10 @@
     "title": "Dashboard"
   },
   {
+    "link": "/profile",
+    "title": "Profile"
+  },
+  {
     "link": "/project",
     "title": "Project"
   },

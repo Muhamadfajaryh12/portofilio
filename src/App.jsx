@@ -16,6 +16,7 @@ function App() {
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/project" element={<ProjectPage />} />
           <Route path="/certificate" element={<CertificatePage />} />
+          <Route path="/profile" element={<AboutPage />} />
         </Routes>
       </div>
     </>

@@ -3,6 +3,8 @@
     "id": 1,
     "name": "SIP Vision",
     "category": "Internship Project",
+    "role": "Frontend",
+    "type": "Website",
     "image": "/assets/sip_web.png",
     "describe": "SIP Vision merupakan sebuah website profile perusahaan yang berisikan informasi produk dan pengujian mata",
     "tech": [
@@ -24,6 +26,8 @@
     "id": 2,
     "name": "E-Checklist",
     "category": "Internship Project",
+    "role": "Fullstack",
+    "type": "Website",
     "image": "/assets/e_checklist_web.png",
     "describe": "E-Checklist adalah sebuah aplikasi yang memungkinkan pengguna untuk membuat, mengelola, dan menyelesaikan daftar periksa secara digital.",
     "tech": [
@@ -54,6 +58,8 @@
     "id": 3,
     "name": "KKMI Manuflex Dashboard",
     "category": "Internship Project",
+    "role": "Fullstack",
+    "type": "Website",
     "image": "/assets/kkmi_web.png",
     "describe": "KKMI Manuflex Dashboard adalah dashboard berbasis website yang dirancang untuk memonitoring kinerja produksi dan operasional dalam pabrik manufaktur",
     "tech": [
@@ -79,6 +85,8 @@
     "id": 4,
     "name": "Admin Puri Hotel",
     "category": "Internship Project",
+    "role": "Fullstack",
+    "type": "Website",
     "image": "/assets/hotel_web.png",
     "describe": "Sebuah sistem yang dirancang untuk mengelola kamar, reservasi, dan layanan tamu di hotel ",
     "tech": [
@@ -101,6 +109,8 @@
     "id": 5,
     "name": "PM Scheduler",
     "category": "Internship Project",
+    "role": "Fullstack",
+    "type": "Website",
     "image": "/assets/pmscheduler_web.png",
     "describe": "Sebuah website yang digunakan oleh Departement Maintenance untuk manajemen jadwal PM lalu memonitoring Andon dan Runtime Mesin serta kondisi mesin",
     "tech": [
@@ -124,6 +134,8 @@
     "id": 6,
     "name": "E-Sparepart",
     "category": "Internship Project",
+    "role": "Fullstack",
+    "type": "Website",
     "image": "/assets/esparepart_web.png",
     "describe": "Sistem yang berisikan catalog sparepart berbagai jenis mesin dan peralatan, sistem ini dirancang untuk mengelola inventaris sparepart ",
     "tech": [
@@ -146,6 +158,8 @@
   {
     "id": 7,
     "name": "Maintenance Learning Center",
+    "role": "Fullstack",
+    "type": "Website",
     "category": "Internship Project",
     "image": "/assets/learning_web.png",
     "describe": "Maintenance Learning Center adalah sebuah sistem yang berisikan modul, dokumentasi dan langkah panduan teknis mengenai prosedur perawatan dan pemeliharaan mesin ",
@@ -168,6 +182,8 @@
   {
     "id": 8,
     "name": "Master Checksheet",
+    "role": "Fullstack",
+    "type": "Website",
     "category": "Internship Project",
     "image": "/assets/checksheet_web.png",
     "describe": "Sebuah sistem yang digunakan untuk membuat checksheet secara dinamis, sistem ini memungkinkan user untuk mendesain dan mengatur checksheet sesuai dengan kebutuhan ",
@@ -189,6 +205,8 @@
   {
     "id": 9,
     "name": "Production Control",
+    "role": "Fullstack",
+    "type": "Website",
     "category": "Internship Project",
     "image": "/assets/production_web.png",
     "describe": "Production Control adalah sebuah sistem yang dirancang untuk memonitoring proses produksi dan pengelolaan tiket Preventive Maintenance (PM)",
@@ -214,6 +232,8 @@
   {
     "id": 6,
     "name": "Capstone Project - Webeer",
+    "role": "Fullstack",
+    "type": "Website",
     "category": "Kampus Merdeka Project",
     "image": "/assets/webeer_web.png",
     "describe": "Tugas Akhir MSIB dengan tema solusi ekonomi dengan membangun sebuah sistem berbasis Web App yang berisikan forum diskusi dan lowongan pekerjaan terkhusus bagi web programmer",
@@ -235,5 +255,29 @@
       }
     ],
     "link": "https://webeer.netlify.app/"
+  },
+  {
+    "id": 1,
+    "name": "Capstone Project - EyeCare",
+    "category": "Kampus Merdeka Project",
+    "role": "Frontend",
+    "type": "Mobile",
+    "image": "/assets/android.png",
+    "describe": "Tugas Akhir MSIB dengan tema solusi kesehatan dengan membangun sebuah sistem berbasis mobile yang berisikan catalog kacamata dan mendiagnosis buta warna",
+    "tech": [
+      {
+        "name": "Kotlin"
+      },
+      {
+        "name": "Jetpack Compose"
+      },
+      {
+        "name": "Express JS"
+      },
+      {
+        "name": "Mongo DB"
+      }
+    ],
+    "link": "https://github.com/Muhamadfajaryh12/EyeCareApp/tree/android"
   }
 ]

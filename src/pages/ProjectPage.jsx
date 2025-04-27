@@ -1,18 +1,42 @@
 import { useEffect, useState } from "react";
 import MainLayout from "../components/layout/MainLayout";
 import DataProjectWeb from "../utils/project.json";
-import DataProjectMobile from "../utils/projectMobile.json";
+
 const ProjectPage = () => {
   const [website, setWebsite] = useState(true);
+  const [dataMobile, setDataMobile] = useState([]);
   const [data, setData] = useState([]);
+
   useEffect(() => {
-    setData(DataProjectWeb);
+    setData(DataProjectWeb.filter((item) => item.type == "Website"));
+    setDataMobile(DataProjectWeb.filter((item) => item.type == "Mobile"));
   }, []);
+
   const handleChange = (e) => {
     if (e) {
-      setData(DataProjectWeb.filter((item) => item.category == e));
+      switch (website) {
+        case true:
+          setData(
+            DataProjectWeb.filter(
+              (item) => item.category == e && item.type == "Website"
+            )
+          );
+          break;
+        default:
+          setDataMobile(
+            DataProjectWeb.filter(
+              (item) => item.category == e && item.type == "Mobile"
+            )
+          );
+      }
     } else {
-      setData(DataProjectWeb);
+      switch (website) {
+        case true:
+          setData(DataProjectWeb.filter((item) => item.type == "Website"));
+          break;
+        default:
+          setDataMobile(DataProjectWeb.filter((item) => item.type == "Mobile"));
+      }
     }
   };
 
@@ -71,7 +95,7 @@ const ProjectPage = () => {
                   </div>
                 </div>
               ))
-            : DataProjectMobile.map((item, index) => (
+            : dataMobile.map((item, index) => (
                 <div key={index}>
                   <img src={item.image} className="rounded-md  h-64" />
                   <div className="flex flex-wrap gap-2 mt-1">

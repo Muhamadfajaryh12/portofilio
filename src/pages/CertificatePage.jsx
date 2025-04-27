@@ -1,4 +1,3 @@
-import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 import DataCertificate from "../utils/certificate.json";
 import { Link } from "react-router-dom";

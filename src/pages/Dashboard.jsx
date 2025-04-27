@@ -29,6 +29,24 @@ const Dashboard = () => {
       },
     ],
   };
+  const dataBarRole = {
+    labels: ["Fullstack", "Frontend", "Backend"],
+    datasets: [
+      {
+        label: ["Jumlah Project"],
+        data: [
+          dataProject.filter((item) => item.role === "Fullstack").length,
+          dataProject.filter((item) => item.role === "Frontend").length,
+          dataProject.filter((item) => item.role === "Backend").length,
+        ],
+        backgroundColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+        ],
+      },
+    ],
+  };
   return (
     <MainLayout>
       <div className="grid grid-cols-3 gap-4 mb-4">
@@ -56,11 +74,11 @@ const Dashboard = () => {
           <ChartBar title={"Grafik Project"} data={dataBarProject} />
         </div>{" "}
         <div className="bg-white p-2 rounded-md shadow-sm">
-          <ChartBar title={"Grafik Project"} data={dataBarProject} />
+          <ChartBar title={"Grafik Project"} data={dataBarRole} />
         </div>
       </div>
       <div className="bg-white p-2 w-auto">
-        <h1 className="font-bold">Aktifitas Github</h1>
+        <h1 className="font-bold text-lg">Aktifitas Github</h1>
         <GitHubCalendar username="Muhamadfajaryh12" />
       </div>
     </MainLayout>

@@ -1,4 +1,3 @@
-import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 import DataExperience from "../utils/experience.json";
 import DataEducation from "../utils/education.json";
